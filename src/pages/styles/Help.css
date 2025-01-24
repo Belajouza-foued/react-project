@@ -1,0 +1,103 @@
+.title-help-3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #1089ff !important; 
+}
+    .link-nutrition {
+        color: #1089ff;
+        text-decoration: none;
+    }  
+      .text-help {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .help-title-1 {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #1089ff;
+      }
+      .help-title {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #1089ff;
+      }
+      .icon-help {
+        width: 45px; /* Ajustez selon vos besoins */
+        height: 45px;
+        filter: brightness(0) invert(1); /* Rendre l'image blanche */
+      }
+      
+      .icon {
+        width: 60px;
+        height: 60px;
+        background-color: #1089ff; /* Cercle vert */
+        border-radius: 50%; /* Pour un cercle */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /*section icon help */
+      .services {
+        background-color: #f4f4f4;
+        padding: 60px 0;
+      }
+      
+      .services h2 {
+        font-size: 2.5rem;
+        color: #333;
+      }
+      
+      .service-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .service-icon {
+        font-size: 3rem;
+        color: #1089ff;
+      }
+      
+      .service-card h3 {
+        font-size: 1.8rem;
+        color: #1089ff;
+        margin-top: 15px;
+      }
+      
+      .service-card p {
+        color: #555;
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+      
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      @media (max-width: 767px) {
+        .services h2 {
+          font-size: 2rem;
+        }
+      
+        .service-card {
+          padding: 15px;
+        }
+      
+        .service-card h3 {
+          font-size: 1.6rem;
+        }
+      }
+      
+      

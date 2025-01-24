@@ -1,0 +1,27 @@
+.dashboard-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .admin-list {
+    margin-bottom: 30px;
+  }
+  
+  .admin-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-list li {
+    margin: 5px 0;
+  }
+  
+  .chart-container {
+    text-align: center;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  

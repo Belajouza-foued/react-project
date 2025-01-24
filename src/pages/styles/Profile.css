@@ -1,0 +1,104 @@
+
+.img-profile {
+    width: 300px;
+  height: 350px;
+border-radius: 20px;
+    max-width: 300px; /* Limite la taille maximale de l'image */
+  float: right;
+    margin-top: 10px;
+    object-fit: cover; /* Remplir l'image tout en conservant ses proportions */
+    border: 1px solid dodgerblue; /* Ajoute une bordure autour de l'image */
+    
+    }
+    .img-profile:hover {
+        transform: scale(1.1); /* Zoom léger lors du survol */
+        transition: transform 0.3s ease;
+      }
+    
+    .title-form {
+        font-size:25px;
+    }
+    em {
+        margin-top: 10px;
+    }
+  
+    
+  
+    .icon-profile {
+        margin-right: 10px;
+        opacity: 20%;
+    }
+    .img-second {
+        width: 70px;
+        border-radius: 50%;
+    }
+    
+    .title-profile {
+        color: dodgerblue;
+    }
+     
+        
+        .jumbotron {
+            display: flex;
+            justify-content: center;
+        }
+        .status {
+            display: flex;
+            justify-content: space-between;
+         
+        
+        }
+        .no-border {
+            border: none;
+        }
+       
+        
+        
+        .btn-floating {
+            width:40px;
+            border: none;
+       
+        }
+       
+      
+       
+        
+        .nav-log {
+            width: 100px;
+            
+            background-color: red; /* Couleur de fond rouge pour le bouton */
+            color: white; /* Couleur du texte en blanc */
+            border: none; /* Retirer la bordure du bouton, si nécessaire */
+               margin-top: 10px;
+              
+               
+        }
+        .btn-dashboard {
+            width: 100px;
+        
+                
+        }
+        
+    
+               
+        
+       .icon-status {
+        margin-top: 55px;
+        border: none;
+        margin-right: 20px;
+        justify-content: space-between;
+       }
+  .rounded {
+    width: 300px;
+    height: 350px;
+   
+   
+  }
+    
+             
+         
+    
+              
+            
+              
+        

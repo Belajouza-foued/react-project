@@ -1,0 +1,43 @@
+
+p.text-stories {
+  font-size: 45px;
+  font-family: Arial Arial, Helvetica, sans-serif;
+}
+.paragraph-text {
+  font-family: 'Georgia', 'Times New Roman', serif; /* Police classique et élégante */
+  font-size: 18px; /* Taille de texte lisible */
+  line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+  color: #333; /* Couleur sombre mais douce pour le confort visuel */
+  text-align: justify; /* Alignement justifié pour un rendu propre */
+  margin: 20px 0; /* Espacement vertical pour éviter qu'il soit collé à d'autres éléments */
+  padding: 10px; /* Espacement interne pour une meilleure structure visuelle */
+  background-color: #f9f9f9; /* Fond légèrement grisé pour un effet élégant */
+  border-left: 4px solid #0088FE; /* Une bordure colorée pour une touche décorative */
+}
+.prevention {
+  text-decoration: none;
+}
+.link-stories {
+  background-color: #0088FE; /* Couleur de fond */
+  border-radius: 8px; /* Coins arrondis pour un effet plus élégant */
+  padding: 15px; /* Espacement interne pour donner de l'air au contenu */
+  margin: 10px 0; /* Espacement vertical entre les rectangles */
+  color: white; /* Texte en blanc pour un meilleur contraste */
+  text-align: center; /* Centrer le contenu */
+}
+
+.link-stories h3 {
+  margin: 0 0 5px 0; /* Réduire l'espacement autour du titre */
+  font-size: 24px; /* Taille de police pour le titre */
+  font-weight: bold; /* Mettre le titre en gras */
+}
+
+.link-stories a {
+  text-decoration: none; /* Enlever la décoration des liens */
+  color: white; /* Garder le texte du lien en blanc */
+  display: block; /* Faire en sorte que le lien prenne tout l'espace */
+}
+
+.link-stories a:hover {
+  opacity: 0.8; /* Réduire l'opacité au survol pour un effet interactif */
+}

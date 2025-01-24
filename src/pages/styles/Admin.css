@@ -1,0 +1,49 @@
+.admin-img {
+    width: 70px;
+    height: 70x;
+}
+
+.bg-table {
+    background-color: #1089ff;
+    opacity: 20%;
+}
+.table-admin {
+    border: none;
+    border-radius: 15px;
+    border-collapse: collapse; /* Pour éviter l'affichage des bordures internes */
+    background-color: #f4f4f4;
+    opacity: 80%;
+    width: 100%; /* Utilisez 100% pour permettre l'adaptation à différentes tailles d'écran */
+    max-width: 1300px; /* Limitez la largeur maximale pour les grands écrans */
+
+}
+
+
+.table-admin th, 
+.table-admin td {
+    border: none;
+    padding: 10px; /* Ajoutez un peu de padding pour améliorer la lisibilité */
+ 
+    text-align: left; /* Alignez le texte à gauche pour une meilleure lisibilité */
+}
+
+.table-title thead  {
+    
+}
+.table-title .left-table {
+   
+    border-top-left-radius: 15px;
+    
+
+}
+.table-title .right-table {
+   
+    border-top-right-radius: 15px;
+    
+
+}
+
+
+
+
+

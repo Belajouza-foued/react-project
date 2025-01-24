@@ -1,0 +1,34 @@
+.imgReg{
+    width: 100%;
+    height: 100%;
+   object-fit:fill;  
+   display: block; /* Évite les espaces en ligne autour de l'image */
+   margin: 0; /* Supprime toute marge potentielle */
+    padding: 0;
+ 
+  
+}
+.reg-col {
+    
+       background-color:dodgerblue;  
+       margin: 0 !important; /* Supprime les marges imposées par Bootstrap */
+       padding: 0 !important; /* Supprime les paddings imposés par Bootstrap */
+
+  
+          }
+
+      
+
+.push {
+    width: 50%;
+}
+
+
+
+
+
+.line {
+    color: dodgerblue;
+    text-align: center;
+}
+

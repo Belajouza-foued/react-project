@@ -1,0 +1,37 @@
+.add-container {
+    padding-top: 50px;
+}
+.button-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    padding-bottom: 30px;
+}
+.button-add .btn {
+    width: 50%; /* Facultatif : ajuste la largeur du bouton */
+}
+.form-container {
+    padding-top: 30px;
+ 
+
+}
+
+
+
+
+.add-img img {
+ width: 350px; /* Ajuste la taille de l'image à son conteneur */
+  max-width: 350px; /* Réduit la taille maximale de l'image */
+  height: 310px; /* Maintient les proportions de l'image */
+  
+ 
+  
+}
+
+
+.form-container {
+
+ 
+
+}

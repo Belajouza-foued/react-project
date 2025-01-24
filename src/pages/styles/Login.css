@@ -1,0 +1,63 @@
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+.button-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+}
+.log-button {
+    
+    width: 80%;
+
+}
+@media screen and (max-width: 600px) {
+    .log-button {
+    
+        width: 60%;
+        background-color: "red";
+    
+    }
+
+}
+@media (max-width: 576px) {
+ .link-register {
+     margin-left: 0 !important; /* Enlève les marges sur petit écran */
+     text-align: center; /* Centre le texte sur petit écran */
+ }
+}
+.link-login {
+ font-size:15px ;
+}
+.design-login {
+    color: black;
+    border: 2px solid black; /* Augmentez la taille de la bordure */
+    padding: 10px; /* Ajoutez du padding pour plus d'espace à l'intérieur */
+    border-radius: 5px; /* Facultatif : ajoutez un rayon pour arrondir les coin*/
+}
+.title-login {
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   color: #1089ff;
+}
+.form-control.design-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
