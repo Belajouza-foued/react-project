@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../pages/styles/Home.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -11,7 +11,6 @@ import staff1 from '../pages/images/staff-1.jpg'
 import staff2 from '../pages/images/staff-2.jpg'
 import staff3 from '../pages/images/staff-3.jpg'
 import staff4 from '../pages/images/staff-4.jpg'
-import staff5 from '../pages/images/staff-3.jpg'
 import staff6 from '../pages/images/staff-6.jpg'
 import staff10 from '../pages/images/dumbbell-ray.svg'
 import staff7 from '../assets/icons/data.png'
@@ -21,20 +20,21 @@ import persone1 from '../pages/images/person-1.jpg'
 import persone2 from '../pages/images/person-2.jpg'
 import persone3 from '../pages/images/image_5.jpg'
 import proud1 from '../assets/icons/success-story (1).png'
+import React, { useState, useEffect } from "react";
+/*npm install react-simple-typewriter*/
 
-
-
-
-
-import { useState } from 'react';
-
+import { Typewriter } from "react-simple-typewriter"; // ✅ Ajout de Typewriter
 
 const Home = () => {
-    
-        const [isExpanded, setIsExpanded] = useState(false);
+            const [isExpanded, setIsExpanded] = useState(false);
         const [isExpandedNutrition, setIsExpandedNutrition] = useState(false);
         const [isExpandedDietetique, setIsExpandedDietetique] = useState(false);
-      
+        const [displayText, setDisplayText] = useState("");
+        const [count, setCount] = useState(0);
+        const [isVisible, setIsVisible] = useState(false);
+               const text = "Bienvenue sur WorldFitness !"; // ✅ Définition du texte
+        const speed = 100; // ✅ Vitesse de l'effet d'écriture
+
         const toggleText = () => {
           setIsExpanded(!isExpanded);
         };
@@ -44,12 +44,58 @@ const Home = () => {
         const toggleDietetique = () => {
           setIsExpandedDietetique(!isExpandedDietetique);
         };
-        
-  
+        useEffect(() => {
+          let i = 0;
+          const interval = setInterval(() => {
+            setDisplayText(text.substring(0, i));
+            i++;
+            if (i > text.length) clearInterval(interval);
+          }, speed);
+          return () => clearInterval(interval);
+        }, []);
+        useEffect(() => {
+          let interval = setInterval(() => {
+            setCount((prev) => (prev < 100 ? prev + 1 : 3000));
+          }, 50);
+          return () => clearInterval(interval);
+        }, []);
+        useEffect(() => {
+          const handleScroll = () => {
+            const position = window.scrollY;
+            if (position > 100) {
+              setIsVisible(true);
+            } else {
+              setIsVisible(false);
+            }
+          };
+      
+          window.addEventListener("scroll", handleScroll);
+          return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
+     
   return (
     <>
+   
   <div className='container-fluid bg-light-subtle'>
- <div className="carousel-header pt-5">
+ <div className="carousel-header">
+ 
+  <div className='col-lg-12 col-sm-12'>
+  
+ <h2 style={{color:"#1089ff"}}>{displayText}</h2> {/* ✅ Affichage progressif du texte */}
+      <Typewriter
+        words= {["Bienvenue sur mon site !", "Découvrez nos services", "Contactez-nous"]}
+        loop={true}
+        cursor
+        cursorStyle="_"
+        typeSpeed={70}
+        deleteSpeed={50}
+        delaySpeed={1000}
+      />
+      
+         <h2>Visiteurs : {count}</h2>;
+             
+         
+
             <div id="carouselId" className="carousel slide" data-bs-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-bs-target="#carouselId" data-bs-slide-to="0" className="active"></li>
@@ -61,6 +107,7 @@ const Home = () => {
                         <div className="carousel-caption">
                             <div className="text-center p-4">
                                 <h4 className="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Welcome to wordFitness</h4>
+                              
                                 <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Fitness pour femme enceinte et debutante</h1>
                                 <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition. ransformez votre santé en changeant vos habitudes, 
                                 </p>
@@ -89,28 +136,27 @@ const Home = () => {
                     <span className="visually-hidden-focusable">Next</span>
                 </button>
             </div>
-            
-        </div>
-        <div className="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog modal-fullscreen">
-                <div className="modal-content rounded-0">
-                    <div className="modal-header">
-                        <h4 className="modal-title text-secondary mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div className="modal-body d-flex align-items-center">
-                        <div className="input-group w-75 mx-auto d-flex">
-                            <input type="search" className="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1"/>
-                            <span id="search-icon-1" className="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
+              {/*scroll*/}
+              </div>
+      
+       
+        <div className='col-lg-12 col-sm-12 pt-5'>
+          <div style={{ paddingTop: "", textAlign: "center", justifyContent: "center",color: "#1089ff" }}>
+      <h2 className={isVisible ? "visible" : "hidden"}>Je s'affiche au scroll !</h2>
+      <style>{`
+        .hidden { opacity: 0; transform: translateY(20px); transition: all 0.5s; }
+        .visible { opacity: 1; transform: translateY(0); }
+      `}</style>
+    </div>
+          </div>
         <section className="ftco-section ftco-services ">
+     
     	<div className="container mt-5 ">
+        <div className='col-lg-12 col-sm-12'>
     		<div className="row">
-				<div className="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+        
+				<div className="col-md-4 col-sm-12 d-flex services align-self-stretch px-4 ftco-animate">
 					<div className="d-block services-wrap text-center">
 					  <div className="img-1b ms-4"></div>
 					  <div className="media-body p-2">
@@ -129,7 +175,7 @@ const Home = () => {
 					</div>      
 				  </div>
 				  
-          <div className="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+          <div className="col-md-4  col-sm-12 d-flex services align-self-stretch px-4 ftco-animate">
             <div className="d-block services-wrap text-center">
               <div className="img-2b ms-3"></div>
               <div className="media-body p-2 mt-3">
@@ -147,7 +193,7 @@ const Home = () => {
               </div>
             </div>    
           </div>
-          <div className="col-md-4 d-flex services align-self-stretch px-4 ftco-animate">
+          <div className="col-md-4 col-sm-12 d-flex services align-self-stretch px-4 ftco-animate">
             <div className="d-block services-wrap text-center">
               <div className="img-b3 ms-3"></div>
               <div className="media-body p-2 mt-3">
@@ -176,6 +222,8 @@ const Home = () => {
               </div>
             </div>      
           </div>
+
+        </div>
         </div>
     	</div>
     
@@ -221,31 +269,31 @@ const Home = () => {
 <section className="ftco-section ftco-no-pt ftco-no-pb">
 			<div className="container-fluid px-md-0">
 				<div className="row no-gutters">
-					<div className="col-md-3 d-flex align-items-stretch">
+					<div className="col-md-3 col-sm-12 d-flex align-items-stretch">
 						<div className="consultation w-100 text-center px-4 px-md-5">
 							<h3 className="mb-4">Healthcare Services</h3>
 							<p className='river'>A small river named Duden flows by their place and supplies</p>
 							<Link to ="#"className="btn-custom">See Services</Link>
 						</div>
 					</div>
-					<div className="col-md-6 d-flex align-items-stretch">
+					<div className="col-md-6 col-sm-12 d-flex align-items-stretch">
 						<div className="consultation consul w-100 px-4 px-md-5">
 							<div className="text-center">
 								<h3 className="mb-4">Free Consultation</h3>
 							</div>
 							<form className="appointment-form">
 								<div className="row">
-									<div className="col-md-12 col-lg-6 col-xl-4">
+									<div className="col-md-12 col-sm-12 col-lg-6 col-xl-4">
 										<div className="form-group">
 				    					<input type="text" className="form-control" placeholder="First Name"/>
 				    				</div>
 									</div>
-									<div className="col-md-12 col-lg-6 col-xl-4">
+									<div className="col-md-12 col-lg-6 col-xl-4 col-sm-12 ">
 										<div className="form-group">
 				    					<input type="text" className="form-control" placeholder="Last Name"/>
 				    				</div>
 									</div>
-									<div className="col-md-12 col-lg-6 col-xl-4">
+									<div className="col-md-12 col-sm-12 col-lg-6 col-xl-4">
 										<div className="form-group">
 				    					<div className="form-field">
 		          					<div className="select-wrap">
@@ -259,7 +307,7 @@ const Home = () => {
 				              </div>
 				    				</div>
 									</div>
-									<div className="col-md-12 col-lg-6 col-xl-4">
+									<div className="col-md-12 col-lg-6 col-xl-4 col-sm-12 ">
 										<div className="form-group">
 				    					<div className="input-wrap">
 				            		<div className="icon"><span  className="ion-md-calendar"></span></div>
@@ -267,7 +315,7 @@ const Home = () => {
 			            		</div>
 				    				</div>
 									</div>
-									<div className="col-md-12 col-lg-6 col-xl-4">
+									<div className="col-md-12 col-lg-6 col-xl-4 col-sm-12 ">
 										<div className="form-group">
 				    					<div className="input-wrap">
 				            		<div className="icon"><span  className="ion-ios-clock"></span></div>
@@ -275,7 +323,7 @@ const Home = () => {
 			            		</div>
 				    				</div>
 									</div>
-									<div className="col-md-12 col-lg-6 col-xl-4">
+									<div className="col-md-12 col-lg-6 col-xl-4 col-sm-12 ">
 										<div className="form-group">
 				              <input type="submit" value="Appointment" className="btn btn-white py-2 px-4"/>
 				            </div>
@@ -284,7 +332,7 @@ const Home = () => {
 		    			</form>
 		    	  </div>
 					</div>
-					<div className="col-md-3 d-flex align-items-stretch">
+					<div className="col-md-3 d-flex align-items-stretch col-sm-12 ">
 						<div className="consultation w-100 text-center px-4 px-md-5">
 							<h3 className="mb-4">Find A Health Expert</h3>
 							<p>A small river named Duden flows by their place and supplies</p>
@@ -296,7 +344,7 @@ const Home = () => {
 		</section>
     <div className=" col-lg-12 col-sm-12 pt-5">
   <h1 className="feedback">FeedBack Clients</h1>
-</div>
+
 {/*card feedback*/}
 <div className='d-flex justify-content-center align-items-center min-vh-100'>
 
@@ -333,17 +381,16 @@ const Home = () => {
       <div  className="container">
         <div  className="row">
           <div  className="col-lg-4">
-            <div  className="card ps-2 pe-2 pt-2">
+            <div  className="card">
               <img
                 src={staff1}
-                className="card-img-top img-top"
+                className="card-img-top"
                 alt="Waterfall"
               />
               <div  className="card-body">
-                <h5  className="card-title">Card title</h5>
+                <h5  className="card-title"> Yassine Khaled </h5>
                 <p  className="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
+                Grâce à ce programme, j'ai retrouvé ma forme et une énergie incroyable au quotidien !
                 </p>
                 <Link to="#" data-bs-ripple-init  className="btn btn-primary">Button</Link>
               </div>
@@ -351,17 +398,16 @@ const Home = () => {
           </div>
 
           <div className="col-lg-4 col-sm-12 d-none d-lg-block">
-            <div className="card ps-2 pe-2 pt-2">
+            <div className="card">
               <img
                 src={staff2}
-                className="card-img-top img-top"
+                className="card-img-top"
                 alt="Sunset Over the Sea"
               />
-              <div  className="card-body">
-                <h5  className="card-title">Card title</h5>
+              <div  className="card-body pt-4">
+                <h5  className="card-title">Sami Nouir</h5>
                 <p  className="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
+                Un accompagnement personnalisé et des résultats visibles dès le premier mois. Je recommande !
                 </p>
                 <Link to="#!" data-bs-ripple-init className="btn btn-primary">Button</Link>
               </div>
@@ -369,17 +415,16 @@ const Home = () => {
           </div>
 
           <div  className="col-lg-4 d-none d-lg-block col-sm-12">
-            <div  className="card ps-2 pe-2 pt-2 ">
+            <div  className="card">
               <img
                 src={staff3}
-                cl className="card-img-top img-top"
+                cl className="card-img-top"
                 alt="Sunset over the Sea"
               />
               <div  className="card-body">
-                <h5  className="card-title">Card title</h5>
+                <h5  className="card-title">Yamen Mohamed</h5>
                 <p  className="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
+                L'équipe est super motivante, et le suivi m'a permis de dépasser mes limites. Merci infiniment !
                 </p>
                 <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
               </div>
@@ -397,50 +442,46 @@ const Home = () => {
             <div className="card">
               <img
                 src={staff4}
-                className="card-img-top img-top"
+                className="card-img-top"
                 alt="Fissure in Sandstone"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Nicolas Durant</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
+                Une équipe à l’écoute et un programme qui s’adapte parfaitement à mes besoins.
                 </p>
                 <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
               </div>
             </div>
           </div>
 
-          <div className="col-lg-4 d-none d-lg-block col-sm-12">
-            <div className="card">
-              <img
-                src={staff5}
-                className="card-img-top img-top"
-                alt="Storm Clouds"
-              />
-              <div  className="card-body">
-                <h5  className="card-title">Card title</h5>
-                <p  className="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
-                </p>
-                <Link to ="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 d-none d-lg-block col-sm-12">
+               <div className="col-lg-4 d-none d-lg-block col-sm-12">
             <div className="card">
               <img
                 src={staff6}
-                className="card-img-top img-top"
+                className="card-img-top"
                 alt="Hot Air Balloons"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Sarra Amri</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up the bulk
-                  of the card's content.
+                Le suivi est excellent, et je vois des progrès chaque semaine.Merci! 
+                </p>
+                <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-12">
+            <div className="card">
+              <img
+                src={staff4}
+                className="card-img-top"
+                alt="Fissure in Sandstone"
+              />
+              <div className="card-body">
+                <h5 className="card-title">Nicolas Durant</h5>
+                <p className="card-text">
+                Une équipe à l’écoute et un programme qui s’adapte parfaitement à mes besoins.
                 </p>
                 <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
               </div>
@@ -456,6 +497,7 @@ const Home = () => {
 
 </div>
 </div>
+</div>
 <div className=" col-lg-12 col-sm-12">
   <h5 className="feedback-1">others services</h5>
   <h1 className='feedback-2'>How it works</h1>
@@ -467,21 +509,19 @@ const Home = () => {
   <div className="bg-image hover-overlay ripple pt-5" data-mdb-ripple-color="light">
   <img  src={staff10}   className="programe-icon " alt="Fissure in Sandstone"
               />
-    <Link to="#!">
-      <div className="mask"></div>
-    </Link>
+    
   </div>
  
   <div className="card-body">
-    <h5 className="card-title">fifi</h5>
+    <h5 className="card-title">Sceances d'entrainement</h5>
     <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
+    Un entraînement rapide et efficace qui combine 
+    des exercices de haute intensité pour des résultats optimaux en un temps record.
     </p>
 
 
   </div>
-  <div className="card-footer">2 days ago</div>
+  <div className="card-footer"><Link to ="/register" className='link-carde'>Réservez votre séance</Link></div>
 </div>
 </div>
 
@@ -490,21 +530,18 @@ const Home = () => {
   <div className="bg-image hover-overlay ripple pt-5" data-mdb-ripple-color="light">
   <img  src={staff7}   className="programe-icon " alt="Fissure in Sandstone"
               />
-    <Link to="#!">
-      <div className="mask"></div>
-    </Link>
+  
   </div>
  
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
+    <h5 className="card-title">Des Résultats Mesurables</h5>
     <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
-    </p>
+    Gagnez en endurance, renforcez vos muscles et améliorez 7
+    votre posture grâce à notre programme d'entraînement sur mesure.    </p>
 
 
   </div>
-  <div className="card-footer">2 days ago</div>
+  <div className="card-footer"><Link to ="https://virtuagym.com/video-on-demand/category/185/" className='link-carde'>Nos temoigages</Link></div>
 </div>
 </div>
 <div className='col-lg-3 col-sm-12'>
@@ -512,21 +549,15 @@ const Home = () => {
   <div className="bg-image hover-overlay ripple pt-5" data-mdb-ripple-color="light">
   <img  src={staff8}   className="programe-icon " alt="Fissure in Sandstone"
               />
-    <Link to="#!">
-      <div className="mask"></div>
-    </Link>
-  </div>
- 
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
+      </div>
+   <div className="card-body">
+    <h5 className="card-title carde">Bien-Être et Équilibre</h5>
     <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
+    Retrouvez l’équilibre entre le corps et l’esprit grâce à des séances combinant relaxation,
+   réduisez le stress et boostez votre vitalité.
     </p>
-
-
   </div>
-  <div className="card-footer">2 days ago</div>
+  <div className="card-footer"><Link to ="/nutrition" className='link-carde'>Nos temoigages</Link></div>
 </div>
 </div>
 <div className='col-lg-3 col-sm-12'>
@@ -540,24 +571,22 @@ const Home = () => {
   </div>
  
   <div className="card-body">
-  <Link to="https://californiagym-sousse.virtuagym.com/user/fouedbelajouza-f7612895/exercise/trainingplan">
-      hello foued
-    </Link>
+  <h5 className="card-title carde">Santé et vitalité</h5>
     <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of the
-      card's content.
+    Prenez soin de votre santé avec un programme complet qui
+     combine activité physique, nutrition équilibrée et conseils de bien-être.
     </p>
 
 
   </div>
-  <div className="card-footer">2 days ago</div>
+  <div className="card-footer"><Link to ="/nutrition" className='link-carde'>Programe Santé</Link></div>
 </div>
 </div>
 </div>
 </div>
 <div className=" col-lg-12 col-sm-12 pt-5">
   <h1 className="feedback pb-2">Others Stories</h1>
-</div>
+
 
 
 {/*new 1 carrousel*/}
@@ -571,8 +600,8 @@ const Home = () => {
      
       <div className="slide-text">
       <img src={proud1} alt='' className='proud mb-3'/>
-        <h5 className="title-1">Stay Healthy</h5>
-        <p className="fs-4">
+        <h5 className="title-1 ">Stay Healthy</h5>
+        <p className="fs-4">carde
           La meilleure façon d’améliorer son bien-être global est de prendre soin de sa santé naturellement.
           <p className="fs-6">
           En adoptant des habitudes saines, comme une alimentation équilibrée, une activité physique régulière et une bonne gestion du stress.
@@ -614,6 +643,7 @@ const Home = () => {
     </div>
   </div>
 </div>
+</div>
 <div className='container-fluid info-bg'>
 
 <div className='col-lg-12 col-sm-12'>
@@ -623,20 +653,20 @@ const Home = () => {
 <p className='health' >Your Health is Our Top Priority with Comprehensive, Affordable Health.</p>
 </div>
 <div className='col-lg-4 col-sm-12'>
-<Link to="/register" data-bs-ripple-init  className="btn btn-white mt-4" style={{ width: '200px', height:'45px' }}>Appointment</Link>
+<Link to="/register" data-bs-ripple-init  className="btn btn-white mt-4" style={{ width: '200px', height:'45px' }}>Rejister</Link>
 </div>
 </div>
 </div>
 </div>
-<div className=" col-lg-12 mt-2 pt-3">
+<div className=" col-lg-12 col-sm-12 mt-2 pt-3">
   <p className='plans pt-2'>Plans & Prices</p>
-  <h1 className="price">Choose Your Perfect plans</h1>
+  <h1 className="price">Choose Your Perfect plans</h1>  
   </div>
   {/*add person*/}
   <section>
     <div className='container-fluid pt-5 bg bg-subtle'>
       <div className="row">
-        <div className="col-md-6 gx-5 mb-4 ps-3 d-flex justify-content-center pt-5">
+        <div className="col-md-6 gx-5 mb-4 ps-3 col-sm-12  d-flex justify-content-center pt-5">
           <div className="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init data-mdb-ripple-color="light">
             <img src = {persone3} className="img-fluid avis" alt=''/>
             <Link to="#!">
@@ -645,11 +675,11 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="col-md-6 gx-5 mb-4">
+        <div className="col-md-6 gx-5 mb-4 col-sm-12 ">
         <Link to="https://virtuagym.com/user/fouedbelajouza-f7612895/nutrition" className='fs-4' style={{ textDecoration: 'none' }}> Programe Entrainement</Link>
           <p className="text-muted">
-          Ce régime vous aidera à perdre du poids de façon durable et vous permettra de maigrir progressivement tout en conservant les nutriments essentiels. 
-          Ce régime est établi à partir d'une combinaison parfaitement équilibrée entre des aliments sains et un faible apport en graisses et en glucides.
+          Un programme d'entraînement efficace combine cardio (30 minutes, 3-5 fois par semaine) pour l'endurance, renforcement musculaire (2-3 séances par semaine) pour la force, et des étirements réguliers pour améliorer la souplesse.
+           Ajuste l'intensité selon ton niveau, en augmentant progressivement la difficulté pour éviter les blessures. 
           </p>
         <Link to="/nutrition" className='fs-4' style={{ textDecoration: 'none' }}> Programe Nutrition</Link>
           <p className="text-muted">
@@ -660,9 +690,9 @@ const Home = () => {
 </Link>
 
           <p className="text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-            nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-            alias, unde optio accusantium soluta, iusto molestiae adipisci et?
+           
+Un programme diététique équilibré inclut des repas riches en légumes, protéines maigres (poisson, poulet, tofu) et glucides complets (riz brun, quinoa). Privilégie les collations légères comme des fruits ou des noix, tout en buvant 1,5 à 2 litres d’eau par jour.
+ Limite les sucres raffinés et les aliments transformés pour optimiser ton énergie et ta santé. 
           </p>
         </div>
       </div>

@@ -1,0 +1,10 @@
+.nike {
+    width: 90px;
+    height: 80px;
+   border-radius: 50%;
+  
+}
+.logo-contact {
+    display: flex;
+    justify-content: space-between;
+}

@@ -23,19 +23,32 @@ import Family from './pages/Family';
 import Stories from './pages/Stories';
 import AddGraphic from './pages/AddGraphic';
 import Graphic from './pages/Graphic'
-
-
-
-
-
-
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Spinner from '../src/components/Spinner';
+import { useEffect,useState } from 'react';
 const App = () => {
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const hideNavbarFooter = ["/admin", "/addAdmin", "/login", "/profile", "/register","/userDashboard", 
-    "/createRegister", "/createLogin", "/createProfile", "/sideBar", "/dashboard","/family","/graphic","/addGraphic"].some(path => location.pathname.startsWith(path));
-
+    "/createRegister", "/createLogin", "/createProfile", "/sideBar", "/dashboard","/family","/graphic","/addGraphic","/blog"].some(path => location.pathname.startsWith(path));
+    useEffect(() => {
+      // Simulez un délai de chargement avant d'afficher le contenu
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 3000); // Ajustez la durée selon vos besoins
+    
+      return () => clearTimeout(timer);
+    }, []);
+    
+    if (loading) {
+      return <Spinner />;
+    }
   return (
     <>
+      <div>
+      {loading ? <Spinner /> : <h1>Bienvenue sur la page d'accueil</h1>}
+    </div>
       {!hideNavbarFooter && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -43,6 +56,7 @@ const App = () => {
         <Route path="nutrition" element={<Nutrition />} />
         <Route path="blog" element={<Blog />} />
         <Route path="help" element={<Help/>} />
+        <Route path="spinner" element={<Spinner/>} />
         
         <Route path="admin" element={<Admin />} />
         <Route path="login" element={<Login />} />
@@ -58,6 +72,8 @@ const App = () => {
         <Route path="addGraphic" element={<AddGraphic />} />
         <Route path="graphic" element={<Graphic />} />
         <Route path="stories" element={<Stories />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="/admin/:id" element={<EditAdmin />} />
        
       </Routes>

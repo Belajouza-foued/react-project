@@ -1,0 +1,44 @@
+.spinner {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .spinner-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .spinner::after {
+    content: '';
+    height: 140px; /* Taille initiale du cercle */
+    width: 140px;  /* Taille initiale du cercle */
+    border: 7px solid lightblue; /* Couleur initiale */
+    border-radius: 50%;
+    animation: spinner 0.75s ease-in-out infinite;
+  }
+  
+  @keyframes spinner {
+    0% {
+      transform: scale(0.1);
+      border-color: dodgerblue;
+     
+      
+    }
+    50% {
+      transform: scale(1.5);
+      border-color: lightskyblue;
+         
+    }
+    100% {
+      transform: scale(0.1);
+      border-color: lightblue;
+      
+      
+    }
+  }

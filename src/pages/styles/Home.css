@@ -417,10 +417,7 @@ color: #1089ff;;
   background-color: #f5f5f5; /* Optionnel : pour tester l'espacement */
 border: none;
 }
-h5.card-title {
-  color: #1089ff;
- 
-}
+
 /*section*/
 .consultation {
   background: #1089ff;
@@ -522,7 +519,7 @@ h5.card-title {
 
 .card-text {
 font-size: larger;
-font-weight: bold;
+font-weight:arial;
   
 }
 .form-position {
@@ -1176,4 +1173,31 @@ align-items: center;
       
        
     }
+    .carde {
+      color: black;
+      font-size: bolder;
+    }
+    .link-carde {
+      text-decoration: none;
+    }
+   .hidden { 
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: all 0.5s ease-in-out; 
+  }
+  .visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+    color: white;  /* Changer la couleur du texte */
+    font-size: 24px; /* Modifier la taille du texte */
+    background-color: #1089ff; /* Ajouter une couleur de fond */
+    padding: 10px; /* Ajouter un espace autour du texte */
+    border-radius: 5px; /* Ajouter un arrondi */
+    transition: all 0.5s ease-in-out; 
+  }
+  .imgCard {
+    width: 150px;
+    height: 150px;
+  }
+
     

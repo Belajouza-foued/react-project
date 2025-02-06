@@ -3,12 +3,47 @@ import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../pages/styles/style.css'
 // Import de l'icône spécifique
-import { faLeaf } from '@fortawesome/free-solid-svg-icons';
+import { faLeaf, } from '@fortawesome/free-solid-svg-icons';
 import logoFit from '../../pages/images/logo-2.jpg'
-import { faFacebook, faTwitter, faInstagram, faDribbble } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faDribbble,} from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
+import { FaSearch } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+
+
 
 
 const Navbar = () => {
+	const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();   const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle("dark-mode");
+  };
+
+  // Liste des mots-clés et leurs liens
+  const data = [
+    { name: "Nutrition", link: "/nutrition" },
+    { name: "stories", link: "/stories" },
+    { name: "Help", link: "/help" },
+   
+  ];
+
+  // Filtrer les suggestions en fonction de l'entrée utilisateur
+  const filteredData = data.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const handleSearch = () => {
+    const foundItem = data.find(
+      (item) => item.name.toLowerCase() === searchTerm.toLowerCase()
+    );
+    
+    if (foundItem) {
+      navigate(foundItem.link); // Redirige vers la page correspondante
+    } else {
+      alert("Produit non trouvé !");
+    }
+  };
   return (
 <div className="wrap">
 			<div className="container">
@@ -44,17 +79,59 @@ const Navbar = () => {
 	      <div className="collapse navbar-collapse" id="ftco-nav">
 	        <ul className="navbar-nav ml-auto">
 	        	<li className="nav-item active"><Link to="/home" className="nav-link">Home</Link></li>
-	        	<li className="nav-item"><Link to="admin" className="nav-link">About</Link></li>
-	        	<li className="nav-item"><Link to="read.html" className="nav-link">Coach</Link></li>
-	        	<li className="nav-item"><Link to="pricing.html" className="nav-link">Pricing</Link></li>
-	        	<li className="nav-item"><Link to="help" className="nav-link">Services</Link></li>
-	          <li className="nav-item"><Link to="success-stories.html" className="nav-link">Stories</Link></li>
-	          <li className="nav-item"><Link to="blog.html" className="nav-link">Blog</Link></li>
+	        	<li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
+            <div className="coach-dropdown pt-4 mt-2">
+      <span className="coach-title" style={{fontSize:"13px", opacity:"60%"}}>Coach</span>
+      <div className="dropdown-content">
+        <Link to="/nutrition">Nutrition</Link>
+        <Link to="/help">Help</Link>
+        <Link to="/services">Services</Link>
+      </div>
+    </div>
+	        	<li className="nav-item"><Link to="/help" className="nav-link">Services</Link></li>
+	          <li className="nav-item"><Link to="/stories" className="nav-link">Facts</Link></li>
+	          <li className="nav-item"><Link to="/blog" className="nav-link">Blog</Link></li>
 	          <li className="nav-item"><Link to="contact" className="nav-link">Contact</Link></li>
 	        </ul>
 	      </div>
+        <h1>fofo</h1>
+        {/*link dropdowwn*/}
+      
 		 
 	    </div>
+   <div class="darkmode">
+      <button onClick={toggleDarkMode} className="btn btn-warning" style={{ padding: "5px", margin: "10px",}}>
+      <i className={darkMode ? "fas fa-sun" : "fas fa-moon"}></i>
+    </button>
+    </div>
+	    <div className="search-container pe-5">
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Rechercher..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button onClick={handleSearch}>
+          <FaSearch />
+        </button>
+      </div>
+
+      {/* Affichage des suggestions */}
+      {searchTerm && (
+        <ul className="search-results">
+          {filteredData.length > 0 ? (
+            filteredData.map((item, index) => (
+              <li key={index} onClick={() => navigate(item.link)}>
+                {item.name}
+              </li>
+            ))
+          ) : (
+            <li>Aucun résultat trouvé</li>
+          )}
+        </ul>
+      )}
+    </div>
 	  </nav>
      
        

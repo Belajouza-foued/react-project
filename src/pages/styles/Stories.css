@@ -1,3 +1,27 @@
+.dark-mode {
+  background-color: #d9d9d9; /* Gris clair foncé */
+  color: #333; /* Gris foncé pour éviter un contraste trop fort */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  border-radius: 20px;
+}
+.darkmode {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.dark-mode a {
+  color: #0077cc; /* Bleu doux pour les liens */
+}
+
+.dark-mode button {
+  background-color: #ccc;
+  color: #222;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
 
 p.text-stories {
   font-size: 45px;
@@ -41,3 +65,7 @@ p.text-stories {
 .link-stories a:hover {
   opacity: 0.8; /* Réduire l'opacité au survol pour un effet interactif */
 }
+.link-jessica {
+  text-decoration: none;
+}
+

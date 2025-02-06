@@ -1,0 +1,162 @@
+.about-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-section {
+    margin-bottom: 20px;
+  }
+  
+  .about-section h2 {
+    color: #007bff;
+  }
+  
+  .about-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #888;
+  }
+  .team-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+  }
+  .img-site {
+    width: 100%;
+    height: 600px;
+   padding: 0px;
+  }
+  .img-card {
+    height: 200px;
+  }
+  .shadow-2-strong {
+ width: 600px;
+  }
+  .about-section {
+    padding: 50px 20px;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    color:#007bff;
+    margin-bottom: 10px;
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .coach-advice {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px;
+    background: #e6f2ff;
+    color:#1089ff;
+    border-left: 5px solid #1089ff;
+  }
+  
+  .coach-advice span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+  }
+.about-coach {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.card-about {
+width: 350px;
+align-items: center;
+
+}
+.our-story {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .our-story .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .our-story h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .our-story p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .our-story ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    text-align: left;
+  }
+  
+  .our-story ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    list-style-type: disc;
+  }
+  .para-text {
+    font-family: 'Georgia', 'Times New Roman', serif; /* Police classique et élégante */
+    font-size: 18px; /* Taille de texte lisible */
+    line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+    color: #333; /* Couleur sombre mais douce pour le confort visuel */
+    text-align: justify; /* Alignement justifié pour un rendu propre */
+    margin: 20px 0; /* Espacement vertical pour éviter qu'il soit collé à d'autres éléments */
+    padding: 10px; /* Espacement interne pour une meilleure structure visuelle */
+    background-color: #f9f9f9; /* Fond légèrement grisé pour un effet élégant */
+  }
+  .end-text {
+    font-size:bold;
+    font-family: 'Georgia', 'Times New Roman', serif; /* Police classique et élégante */
+    font-size: 24px;
+    color: black;
+  }
+ 
+  .border-login {
+    border: 1px solid #ccc; /* Couleur grise légère */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espace interne pour éloigner le contenu de la bordure */
+    margin: 20px auto; /* Espace externe pour centrer et éloigner du reste */
+    max-width: 600px; /* Limite la largeur du formulaire */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    background-color: #f9f9f9; /* Couleur d'arrière-plan douce */
+  }
+  
+  .title-end {
+    font-size: 40px;
+    font-family: 'Georgia', 'Times New Roman', serif; /* Police classique et élégante */
+    color:#007bff;
+
+  }

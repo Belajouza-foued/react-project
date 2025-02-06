@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, Outlet } from 'react-router-dom';
-import '../../pages/styles/Footer.css'
+import './Footer.css'
 
 // Import de l'icône spécifique
 
@@ -37,30 +37,30 @@ return (
 					<div className="col-md-8 col-lg-7">
 						<div className="row">
 							<div className="col-md-3 mb-md-0 mb-4 border-left">
-								<h2 className="footer-heading">Services</h2>
-								<ul className="list-unstyled">
-		              <li><Link to="#" className="py-1 d-block">Balance Body</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Physical Activity</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Fitness Program</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Healthy Food</Link></li>
+								<h2 className="footer-heading" style={{ textDecoration: 'none' }}>Services</h2>
+								<ul className="list-unstyled" style={{ textDecoration: 'none' }}>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Balance Body</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Physical Activity</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Fitness Program</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Healthy Food</Link></li>
 		            </ul>
 							</div>
 							<div className="col-md-3 mb-md-0 mb-4 border-left">
-								<h2 className="footer-heading">About</h2>
-								<ul className="list-unstyled">
-		              <li><Link to="#" className="py-1 d-block">Staff</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Team</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Careers</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Blog</Link></li>
+								<h2 className="footer-heading" style={{ textDecoration: 'none' }}>About</h2>
+								<ul className="list-unstyled" style={{ textDecoration: 'none' }}>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Staff</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Team</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Careers</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Blog</Link></li>
 		            </ul>
 							</div>
-							<div className="col-md-3 mb-md-0 mb-4 border-left">
-								<h2 className="footer-heading">Resources</h2>
+							<div className="col-md-3 mb-md-0 mb-4 border-left" style={{ textDecoration: 'none' }}>
+								<h2 className="footer-heading" style={{ textDecoration: 'none' }}>Resources</h2>
 								<ul className="list-unstyled">
-		              <li><Link to="#" className="py-1 d-block">Security</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Global</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Charts</Link></li>
-		              <li><Link to="#" className="py-1 d-block">Privacy</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Security</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Global</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Charts</Link></li>
+		              <li><Link to="#" className="py-1 d-block" style={{ textDecoration: 'none' }}>Privacy</Link></li>
 		            </ul>
 							</div>
 							<div className="col-md-3 mb-md-0 mb-4 border-left">
@@ -99,10 +99,11 @@ return (
           </div>
           <div className="col-md-6 col-lg-4 text-md-right">
           	<p className="mb-0 list-unstyled">
-          		<Link className="mr-md-3" to="#">Terms</Link>
-          		<Link className="mr-md-3" to="#">Privacy</Link>
-          		<Link className="mr-md-3" to="#">Compliances</Link>
+          		<Link className="mr-md-3 " to="#">Terms</Link>
+          		<Link className="mr-md-3 ps-2" to="#">Privacy</Link>
+          		<Link className="mr-md-3 ps-2" to="#">Compliances</Link>
           	</p>
+			  <p className='text-condition'>© 2025 WorldFitness. Tous droits réservés.</p>
           </div>
         </div>
 			</div>
