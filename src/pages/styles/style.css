@@ -1051,15 +1051,16 @@ background-image:url(../images/coach-1.jpg) ;
 /* Le mot "Coach" */
 .coach-title {
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 400;
   padding: 10px;
   /* Vous pouvez ajouter une couleur de fond au survol si besoin */
   transition: background-color 0.3s ease;
 }
 
 /* Changement de couleur au survol sur "Coach" */
-.coach-title:hover {
+span.coach-title:hover {
   background-color: #f0f0f0;
+  color: #006fdc !important;
 }
 
 /* Contenu du dropdown, caché par défaut */
@@ -1090,5 +1091,25 @@ background-image:url(../images/coach-1.jpg) ;
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
+.about-p {
+  color:#4d4d4d;
+  
+}
+.about-p:hover {
+  color:#006fdc;
+  
+}
+.check-language {
+border-radius: 15px;
+background-color: #fff;
+}
+.check-language:hover {
+  border-radius: 15px;
+  background-color: #fff;
+  }
+  select option.check-language:hover {
+    border-radius: 15px;
+    background-color:#fff ;
+    }
 
       

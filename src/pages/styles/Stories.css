@@ -42,30 +42,30 @@ p.text-stories {
   text-decoration: none;
 }
 .link-stories {
+  display: flex;
+  justify-content: center;
   background-color: #0088FE; /* Couleur de fond */
   border-radius: 8px; /* Coins arrondis pour un effet plus élégant */
-  padding: 15px; /* Espacement interne pour donner de l'air au contenu */
-  margin: 10px 0; /* Espacement vertical entre les rectangles */
+  padding: 10px; /* Espacement interne pour donner de l'air au contenu */
   color: white; /* Texte en blanc pour un meilleur contraste */
   text-align: center; /* Centrer le contenu */
+  align-items: center;
 }
-
-.link-stories h3 {
-  margin: 0 0 5px 0; /* Réduire l'espacement autour du titre */
-  font-size: 24px; /* Taille de police pour le titre */
-  font-weight: bold; /* Mettre le titre en gras */
-}
-
-.link-stories a {
-  text-decoration: none; /* Enlever la décoration des liens */
-  color: white; /* Garder le texte du lien en blanc */
-  display: block; /* Faire en sorte que le lien prenne tout l'espace */
-}
-
-.link-stories a:hover {
-  opacity: 0.8; /* Réduire l'opacité au survol pour un effet interactif */
-}
-.link-jessica {
+.widget__links {
+  color: white;
+  font-size: 18px;
   text-decoration: none;
+
 }
+.entry-image {
+  position: relative;
+
+}
+
+.image-small {
+  width: 80px; /* Définit la largeur de l'image */
+  height: auto; /* Garde le ratio de l'image */
+  border-radius: 5px; /* Optionnel : arrondir les coins */
+}
+
 

@@ -99,5 +99,13 @@
           font-size: 1.6rem;
         }
       }
+      .text-others {
+        font-size: 1.8rem;
+        color: #1089ff;
+        text-decoration: none;
+        font-weight:700;
+        font-style: italic;
+     
+      }
       
       

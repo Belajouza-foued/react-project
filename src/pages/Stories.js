@@ -5,11 +5,18 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNutritionix } from '@fortawesome/free-brands-svg-icons';
 import { faLeaf,faHeartCircleXmark,faPersonRunning,faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import entrainement from '../assets/entrainement.jpg'
+import the from '../assets/the.jpg'
+import sel from '../assets/sels.jpg'
+import regime from '../assets/regime.jpg'
+import health from '../assets/health.jpg'
+import decor from '../assets/trainining.jpg'
+
 
 import { Link } from 'react-router-dom';
 
 const Stories = () => {
-  
+
  
   return(
     <>
@@ -106,43 +113,203 @@ const Stories = () => {
 
 </div>
 							</div>
-             <div className='col-lg-4 col-sm-12'>
-              <div className='row'>
-              <div className='col-lg-6 col-sm-12 group-link'>
-                  <div className="link-stories pt-2 pb-2 ms-5 mt-5">
+             <div className='col-lg-4 col-sm-12 group-link mt-5'>
+              <div className='group-stories ms-5  ps-3'>
+                              <div className="link-stories mt-5">
                 <Link to="https://www.fitness.com/fr/articles/category/le-nutriotion" className="widget__links">
-                  <h3 style={{color: "white"}}><FontAwesomeIcon icon={faNutritionix} /></h3>
+                 <FontAwesomeIcon icon={faNutritionix} color="white"style={{ marginRight: "8px" }}/>
                    Nutrition
                   </Link>
                  </div>
-                 <div className="link-stories pt-2 pb-2 ms-5 mt-3">
+                 <div className="link-stories mt-5">
                 <Link to="https://www.fitness.com/fr/articles/category/le-nutriotion" className="widget__links">
-                  <h3> <FontAwesomeIcon icon={faLeaf} color="white" /></h3>
+                  <FontAwesomeIcon icon={faLeaf} color="white" style={{ marginRight: "8px" }} />
                    WellNess
                   </Link>
                  </div>
-              </div>
-              <div className='col-lg-6 col-sm-12'>
-              <div className="link-stories pb-2 pt-2 ms-5 mt-5 ">
+             
+              
+              <div className="link-stories mt-5">
                 <Link to="https://www.fitness.com/fr/articles/category/le-nutriotion" className="widget__links">
-                  <h3><FontAwesomeIcon icon={faPersonRunning} color="white" /></h3>
+                  <FontAwesomeIcon icon={faPersonRunning} color="white" style={{ marginRight: "8px" }}/>
                    Training
                   </Link>
                  </div>
-                 <div className="link-stories pb-2 pt-2 ms-5 mt-3">
+                 <div className="link-stories mt-5">
                 <Link to="https://www.fitness.com/fr/articles/category/le-nutriotion" className="widget__links">
-                  <h3><FontAwesomeIcon icon={faHeartCircleXmark} color="white" /></h3>
+                  <FontAwesomeIcon icon={faHeartCircleXmark} color="white" style={{ marginRight: "8px" }} />
                    Health
                   </Link>
                  </div>
 
-                </div>
-                <Link to="https://www.fitness.com/fr/articles/la-force-des-sels-mineraux" className='ms-5 mt-2 '><span>La force des sels minéraux</span> <FontAwesomeIcon icon={faChevronRight} className='mt-2'/></Link>
+                
+                <Link to="https://www.fitness.com/fr/articles/la-force-des-sels-mineraux" className='mt-5'><span>La force des sels minéraux</span> <FontAwesomeIcon icon={faChevronRight} className='mt-5'/></Link>
               
-             </div>
 
 			</div>
-     
+       <div className="row align-items-center ms-5"> {/* Aligne l'image et le texte verticalement */}
+    {/* Image en 80px */}
+    <div className="col-auto">
+      <div className="entry-image">
+        <a href="https://www.fitness.com/fr/articles/un-coach-sportif-au-poignet" title="Un coach sportif au poignet">
+          <img
+            loading="lazy"
+            src="https://www.fitness.com/uploads/articles/1236950820_polar4.jpg"
+            alt="Un coach sportif au poignet"
+            className="img-fluid image-small"
+          />
+        </a>
+      </div>
+    </div>
+
+    {/* Texte à côté de l'image */}
+    <div className="col">
+      <div className="entry-title mt-2">
+                <Link to="https://www.fitness.com/fr/articles/un-coach-sportif-au-poignet">
+            Un coach sportif au poignet
+          </Link>
+              <div className="entry-meta">
+          <ul>
+            <li>01/14/21</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div className='row -align-items-center'>
+  <div className='col-auto'>
+    <div className='test-img'>
+    <Link to="/nutrition" title='test-image'>
+    <img src={sel} className='img-fluid image-small' alt='coach test' loading='lazy'/>
+    </Link>
+
+  </div>
+</div>
+<div className='col'>
+  <div className='test-2'>
+        <a href="https://www.fitness.com/fr/articles/la-force-des-sels-mineraux">La force des sels minéraux</a>
+        <div className='test-ul'>
+      <ul>
+        <li>6/12/10</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+      {/*add tst 3*/}
+        <div className='row -align-items-center'>
+  <div className='col-auto'>
+    <div className='test-image'>
+    <Link to="/nutrition" title='test-image'>
+    <img src={regime} style={{height:"55px"}} className='img-fluid image-small' alt='coach test' loading='lazy'/>
+    </Link>
+
+  </div>
+</div>
+<div className='col'>
+  <div className='test-2'>
+  <a href="https://www.fitness.com/fr/articles/maigrir-sans-regime">Maigrir sans régime?</a>
+    <div className='test-ul'>
+      <ul>
+        <li>6/12/10</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+      {/*add test-3*/}
+      <div className='row -align-items-center'>
+  <div className='col-auto'>
+    <div className='test-img'>
+    <Link to="/nutrition" title='test-image'>
+    <img src={the} style={{height:"55px"}} className='img-fluid image-small' alt='coach test' loading='lazy'/>
+    </Link>
+
+  </div>
+</div>
+<div className='col'>
+  <div className='test-2'>
+      <a href="https://www.fitness.com/fr/articles/le-the-vert-la-boisson-miracle">Le thé vert – La boisson miracle!</a>
+      <div className='test-ul'>
+      <ul>
+        <li>6/12/10</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+      {/*add-test*/}
+      <div className='row -align-items-center'>
+  <div className='col-auto'>
+    <div className='test-img'>
+    <Link to="/nutrition" title='test-image'>
+    <img src={entrainement}  style={{height:"55px"}} className='img-fluid image-small' alt='coach test' loading='lazy'/>
+    </Link>
+
+  </div>
+</div>
+<div className='col'>
+  <div className='test-2'>
+      <Link>Entrainement pour bonne sante</Link>
+      <div className='test-ul'>
+      <ul>
+        <li>6/12/10</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+      
+      <div className='row -align-items-center'>
+      <div className="col-auto">
+      <div className="entry-image">
+        <a href="https://www.fitness.com/fr/articles/maigrir-sans-regime" title="Un coach sportif au poignet">
+          <img
+            loading="lazy"
+            src={health}
+            alt="Un coach sportif au poignet"
+            className="img-fluid image-small"
+          />
+        </a>
+      </div>
+    </div>
+    <div className='col'>
+  <div className='test-2'>
+      <Link>health c est la vie</Link>
+      <div className='test-ul'>
+      <ul>
+        <li>6/12/10</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+{/*add img test*/}
+<div className='row -align-items-center'>
+  <div className='col-auto'>
+    <div className='test-img'>
+    <Link to="https://www.mega-gear.net/fr/blog/207-exercices-pour-les-fessiers-programme-efficace" title='test-image'>
+    <img src={decor}  style={{height:"55px"}} className='img-fluid image-small' alt='coach test' loading='lazy'/>
+    </Link>
+
+  </div>
+</div>
+<div className='col'>
+  <div className='test-2'>
+      <Link to="https://www.mega-gear.net/fr/blog/207-exercices-pour-les-fessiers-programme-efficace">5 exercices efficaces pour fessiers</Link>
+      <div className='test-ul'>
+      <ul>
+        <li>6/12/10</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+    {/* Texte à côté de l'image */}
+ 
+  </div>
+
+
+      </div>
       
       </div>
         

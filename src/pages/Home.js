@@ -31,6 +31,7 @@ const Home = () => {
         const [isExpandedDietetique, setIsExpandedDietetique] = useState(false);
         const [displayText, setDisplayText] = useState("");
         const [count, setCount] = useState(0);
+        
         const [isVisible, setIsVisible] = useState(false);
                const text = "Bienvenue sur WorldFitness !"; // ✅ Définition du texte
         const speed = 100; // ✅ Vitesse de l'effet d'écriture
@@ -109,20 +110,20 @@ const Home = () => {
                                 <h4 className="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Welcome to wordFitness</h4>
                               
                                 <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Fitness pour femme enceinte et debutante</h1>
-                                <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition. ransformez votre santé en changeant vos habitudes, 
+                                <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition.Transformez votre santé en changeant vos habitudes, 
                                 </p>
-                                <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="#">More Details</Link>
-                            </div>
+                                <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s"  to="https://www.mega-gear.net/fr/blog/231-programme-femmes-debutant-musculation">More Details</Link>
+                                 </div>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={image1} className="img-fluid" alt="pour femme"/>
                         <div className="carousel-caption">
                             <div className="text-center p-4">
-                                                              <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Best Visa Immigrations Services</h1>
-                                <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                                              <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Programe musculation</h1>
+                                <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition.Brûler,sécher
                                 </p>
-                                <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" href="#">More Details</Link>
+                                <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" to="https://www.mega-gear.net/fr/blog/category/4-programmes-de-musculation">More Details</Link>
                             </div>
                         </div>
                     </div>
@@ -143,7 +144,7 @@ const Home = () => {
        
         <div className='col-lg-12 col-sm-12 pt-5'>
           <div style={{ paddingTop: "", textAlign: "center", justifyContent: "center",color: "#1089ff" }}>
-      <h2 className={isVisible ? "visible" : "hidden"}>Je s'affiche au scroll !</h2>
+      <h2 className={isVisible ? "visible" : "hidden"}>Our program and plans !</h2>
       <style>{`
         .hidden { opacity: 0; transform: translateY(20px); transition: all 0.5s; }
         .visible { opacity: 1; transform: translateY(0); }
@@ -160,7 +161,7 @@ const Home = () => {
 					<div className="d-block services-wrap text-center">
 					  <div className="img-1b ms-4"></div>
 					  <div className="media-body p-2">
-						<h3 className="heading">Programme pour débutantes</h3>
+						<Link className="mt-5" style={{textDecoration:"none", fontSize:'20px'}} to="https://www.mega-gear.net/fr/blog/231-programme-femmes-debutant-musculation">Programme pour débutantes</Link>
 									         <div>
       <p>
       Un programme sur mesure pour aider les débutantes à démarrer leur parcours de fitness en toute confiance.</p>
@@ -178,9 +179,9 @@ const Home = () => {
           <div className="col-md-4  col-sm-12 d-flex services align-self-stretch px-4 ftco-animate">
             <div className="d-block services-wrap text-center">
               <div className="img-2b ms-3"></div>
-              <div className="media-body p-2 mt-3">
-                <h3 className="heading">Plan nutritionel</h3>
-			 <p>Des plans nutritionnels équilibrés pour atteindre vos objectifs santé et bien-être.</p>
+              <div className="media-body p-2">
+                <Link to="/nutrition" style={{textDecoration:"none", fontSize:'20px'}} className="">Plan nutritionel</Link>
+			 <p>Des plans nutritionnels équilibrés pour atteindre vos objectifs santé et bien-être.Avec alimentatione bien équilibré</p>
         {isExpandedNutrition && ( <p id='more-text-nutrition'> Un plan nutritionnel bien conçu est essentiel pour atteindre vos objectifs de santé et de bien-être.
         Que vous cherchiez à perdre du poids, à gagner en muscle ou simplement à améliorer votre alimentation, un plan personnalisé vous aidera à suivre une alimentation équilibrée et adaptée à vos besoins spécifiques.</p>
         )}
@@ -196,9 +197,9 @@ const Home = () => {
           <div className="col-md-4 col-sm-12 d-flex services align-self-stretch px-4 ftco-animate">
             <div className="d-block services-wrap text-center">
               <div className="img-b3 ms-3"></div>
-              <div className="media-body p-2 mt-3">
-            <h3 className="heading">Programe diétetique</h3>
-                <p>Programme diététique adapté pour une transformation saine et durable que ce soit la prise ou perte de muscle..</p>
+              <div className="media-body mt-3 ">
+            <Link to="https://www.mega-gear.net/fr/blog/category/6-exercices-musculation" style={{textDecoration:"none", fontSize:'20px'}}className="mb-1">Programe haut-niveau</Link>
+                <p> Nous évoquerons les exercices de base pour développer la masse musculaire qui ciblent chaque muscle en particulier.</p>
 				
         
 					{isExpandedDietetique && (
@@ -228,6 +229,7 @@ const Home = () => {
     	</div>
     
     </section>
+    
    
     <div className="d-flex justify-content-center align-items-center min-vh-100">
   <div className="card mb-3 text-center form-position w-100" style={{ maxWidth: '1000px' }}>
@@ -666,14 +668,15 @@ const Home = () => {
   <section>
     <div className='container-fluid pt-5 bg bg-subtle'>
       <div className="row">
-        <div className="col-md-6 gx-5 mb-4 ps-3 col-sm-12  d-flex justify-content-center pt-5">
+         {/* Image qui glisse de la gauche */}
+         <div className="col-md-6 gx-5 mb-4 ps-3 col-sm-12  d-flex justify-content-center pt-5">
           <div className="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init data-mdb-ripple-color="light">
             <img src = {persone3} className="img-fluid avis" alt=''/>
             <Link to="#!">
               <div className="mask" style={{backgroundColor: 'lightblue'}}></div>
             </Link>
           </div>
-        </div>
+          </div>
 
         <div className="col-md-6 gx-5 mb-4 col-sm-12 ">
         <Link to="https://virtuagym.com/user/fouedbelajouza-f7612895/nutrition" className='fs-4' style={{ textDecoration: 'none' }}> Programe Entrainement</Link>
@@ -694,7 +697,7 @@ const Home = () => {
 Un programme diététique équilibré inclut des repas riches en légumes, protéines maigres (poisson, poulet, tofu) et glucides complets (riz brun, quinoa). Privilégie les collations légères comme des fruits ou des noix, tout en buvant 1,5 à 2 litres d’eau par jour.
  Limite les sucres raffinés et les aliments transformés pour optimiser ton énergie et ta santé. 
           </p>
-        </div>
+          </div>
       </div>
       </div>
     </section>

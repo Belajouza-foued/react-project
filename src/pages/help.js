@@ -110,8 +110,11 @@ const help = () => {
           {/* Coaching personnalisé */}
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="service-card">
+              <div>
               <FontAwesomeIcon icon={faUserTie} className="service-icon" />
-              <h3 className="text-center">Coaching Personnalisé</h3>
+              </div>
+            
+              <Link to="/contact" className="text-others">Coaching Personnalisé</Link>
               <p>
                 Séances individuelles avec nos entraîneurs experts pour personnaliser votre programme d'entraînement en fonction de vos besoins spécifiques.
               </p>
@@ -121,8 +124,10 @@ const help = () => {
           {/* Suivi de progression */}
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="service-card">
-              <FontAwesomeIcon icon={faChartLine} className="service-icon" />
-              <h3 className="text-center">Suivi de Progression</h3>
+              <div>
+              <FontAwesomeIcon icon={faChartLine} className="service-icon" /></div>
+              <Link to='/contact'
+              className="text-others">Suivi de Progression</Link>
               <p>
                 Recevez un suivi personnalisé de vos progrès avec des rapports détaillés pour rester motivé et ajuster vos entraînements.
               </p>
@@ -132,8 +137,8 @@ const help = () => {
           {/* Séances de groupe */}
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="service-card">
-              <FontAwesomeIcon icon={faUsers} className="service-icon" />
-              <h3 className="text-center">Séances de Groupe</h3>
+              <div>  <FontAwesomeIcon icon={faUsers} className="service-icon" /></div>
+                          <Link to="/contact" className="text-others">Séances de Groupe</Link>
               <p>
                 Participez à nos séances de groupe dynamiques allant du yoga aux entraînements à haute intensité, adaptés à tous les niveaux de forme physique.
               </p>
@@ -143,9 +148,9 @@ const help = () => {
           {/* Coaching à distance */}
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="service-card">
-              <FontAwesomeIcon icon={faLaptop} className="service-icon" />
-             <h3 className="text-center">Coaching à Distance</h3>
-              <p>
+              <div><FontAwesomeIcon icon={faLaptop} className="service-icon" /></div>
+              <Link to="/contact" className="text-others">Coaching à Distance</Link>
+                                      <p>
                 Entraînez-vous où que vous soyez grâce à nos séances de coaching en ligne. Suivez vos progrès à distance avec nos entraîneurs certifiés.
               </p>
             </div>
@@ -154,8 +159,9 @@ const help = () => {
           {/* Ateliers nutrition */}
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="service-card">
-              <FontAwesomeIcon icon={faAppleAlt} className="service-icon" />
-              <h3 className="text-center">Ateliers Nutrition</h3>
+              <div>
+              <FontAwesomeIcon icon={faAppleAlt} className="service-icon" /></div> 
+              <Link to="/contact" className="text-others">Ateliers Nutrition</Link>
               <p>
                 Apprenez à mieux nourrir votre corps avec nos ateliers mensuels sur la nutrition et la santé mentale.
               </p>
@@ -165,8 +171,9 @@ const help = () => {
           {/* Séances en extérieur */}
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="service-card">
-              <FontAwesomeIcon icon={faTree} className="service-icon" />
-              <h3 className="text-center">Séances en Extérieur</h3>
+              <div>
+              <FontAwesomeIcon icon={faTree} className="service-icon" /></div>
+              <Link to="/contact" className="text-others">Séances en Extérieur</Link>
               <p>
                 Réalisez vos entraînements en plein air et connectez-vous à la nature tout en atteignant vos objectifs fitness.
               </p>
@@ -189,7 +196,8 @@ const help = () => {
           <div className="col-md-3 d-flex services align-self-stretch px-4 ftco-animate">
             <div className="d-block text-center">
               <div className="icon d-flex justify-content-center align-items-center">
-              <img src={ImgProgram} className='icon-help' alt=''/>
+                <Link to="/about"className=''>
+              <img src={ImgProgram} className='icon-help' alt=''/></Link>
               </div>
               <div className="media-body p-2 mt-3">
            

@@ -9,12 +9,14 @@ import { faFacebook, faTwitter, faInstagram, faDribbble,} from '@fortawesome/fre
 import { useState } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import translations from "../../translations";
 
 
 
 
 const Navbar = () => {
 	const [searchTerm, setSearchTerm] = useState("");
+  const [lang, setLang] = useState(localStorage.getItem("language") || "fr");
   const navigate = useNavigate();   const [darkMode, setDarkMode] = useState(false);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -33,6 +35,12 @@ const Navbar = () => {
   const filteredData = data.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  /*add language frensh an eng*/
+  const changeLanguage = (newLang) => {
+    setLang(newLang);
+    localStorage.setItem("language", newLang); // Sauvegarder la langue
+  };
+  /*add language frensh an eng*/
   const handleSearch = () => {
     const foundItem = data.find(
       (item) => item.name.toLowerCase() === searchTerm.toLowerCase()
@@ -73,15 +81,20 @@ const Navbar = () => {
   <span>fitness<FontAwesomeIcon icon={faLeaf}/></span>
 </Link>
 
-	      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span className="fa fa-bars"></span> Menu
-	      </button>
-	      <div className="collapse navbar-collapse" id="ftco-nav">
+	      <div className="collapse navbar-collapse ms-1 ps-5" id="ftco-nav">
 	        <ul className="navbar-nav ml-auto">
-	        	<li className="nav-item active"><Link to="/home" className="nav-link">Home</Link></li>
-	        	<li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
+          <li className="nav-item">  <p className="pt-4 mt-2 pe-4 about-p" style={{ fontSize: "13px",fontWeight:"400" }}>
+    <Link to="/home" style={{ textDecoration: "none", color:"inherit" }}>
+      {translations[lang].home}
+    </Link>
+  </p></li>
+	        		        	<li className="nav-item">  <p className="pt-4 mt-2 about-p" style={{ fontSize: "13px",fontWeight:"400" }}>
+    <Link to="/about" style={{ textDecoration: "none", color:"inherit" }}>
+      {translations[lang].about}
+    </Link>
+  </p></li>
             <div className="coach-dropdown pt-4 mt-2">
-      <span className="coach-title" style={{fontSize:"13px", opacity:"60%"}}>Coach</span>
+      <span className="coach-title ms-3 pb-1" style={{fontSize:"13px", opacity:"60%", color:"inherit", fontWeight:"400"}}>Coach</span>
       <div className="dropdown-content">
         <Link to="/nutrition">Nutrition</Link>
         <Link to="/help">Help</Link>
@@ -89,15 +102,25 @@ const Navbar = () => {
       </div>
     </div>
 	        	<li className="nav-item"><Link to="/help" className="nav-link">Services</Link></li>
-	          <li className="nav-item"><Link to="/stories" className="nav-link">Facts</Link></li>
-	          <li className="nav-item"><Link to="/blog" className="nav-link">Blog</Link></li>
-	          <li className="nav-item"><Link to="contact" className="nav-link">Contact</Link></li>
+	          <li className="nav-item"><p className='mt-4 pt-2 about-p ms-1 mt-2' style={{fontSize:"13px"}}>
+              <Link to="/stories" style={{textDecorationLine:"none", color:"inherit"}}>{translations[lang].facts}</Link></p></li>
+	          <li className="nav-item"><p className="mt-4 pt-2 ps-4 about-p"style={{fontSize:"13px"}}><Link to="/contact" style={{textDecorationLine:"none", color:"inherit"}}>{translations[lang].contact}</Link></p></li>
 	        </ul>
 	      </div>
-        <h1>fofo</h1>
-        {/*link dropdowwn*/}
+     
+        {/*select language fren and eng*/}
+       
+        <div>
       
-		 
+      
+
+      <select onChange={(e) => changeLanguage(e.target.value)} value={lang} className='form-check check-language' style={{padding:"5px"}}>
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+     {/*select language fren and eng*/}
+      		 
 	    </div>
    <div class="darkmode">
       <button onClick={toggleDarkMode} className="btn btn-warning" style={{ padding: "5px", margin: "10px",}}>

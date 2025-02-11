@@ -28,7 +28,7 @@ const Nutrition = () => {
   </div>
   <ul className="list-group list-group-flush">
     <li className="list-group-item"><Link to="https://virtuagym.com/nutrition/search" className="programe">programe nutrition</Link></li>
-    <li className="list-group-item"><Link to="https://www.kinatex.com/cliniques/laval/education-et-conseils/sante-de-la-femme-enceinte-au-1er-trimestre-exercices/" className="programe">programe pregnant</Link></li>
+    <li className="list-group-item"><Link to="https://www.kinatex.com/cliniques/laval/education-et-conseils/sante-de-la-femme-enceinte-au-1er-trimestre-exercices/" className="programe">Conseils et Prevention</Link></li>
     <li className="list-group-item"><Link to="https://www.mega-gear.net/fr/blog/231-programme-femmes-debutant-musculation" className="programe">programe musculation</Link></li>
   </ul>
   <div className="card-body">

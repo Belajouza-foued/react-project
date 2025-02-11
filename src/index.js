@@ -27,9 +27,13 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Spinner from '../src/components/Spinner';
 import { useEffect,useState } from 'react';
+ // ✅ Import des traductions
+
 const App = () => {
+  
   const [loading, setLoading] = useState(true);
-  const location = useLocation();
+
+    const location = useLocation();
   const hideNavbarFooter = ["/admin", "/addAdmin", "/login", "/profile", "/register","/userDashboard", 
     "/createRegister", "/createLogin", "/createProfile", "/sideBar", "/dashboard","/family","/graphic","/addGraphic","/blog"].some(path => location.pathname.startsWith(path));
     useEffect(() => {
@@ -40,14 +44,17 @@ const App = () => {
     
       return () => clearTimeout(timer);
     }, []);
+   
     
     if (loading) {
       return <Spinner />;
     }
+   
   return (
     <>
+    
       <div>
-      {loading ? <Spinner /> : <h1>Bienvenue sur la page d'accueil</h1>}
+      
     </div>
       {!hideNavbarFooter && <Navbar />}
       <Routes>
