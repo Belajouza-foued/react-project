@@ -177,6 +177,7 @@ const help = () => {
               <p>
                 Réalisez vos entraînements en plein air et connectez-vous à la nature tout en atteignant vos objectifs fitness.
               </p>
+              <h1>fofo</h1>
             </div>
           </div>
         </div>
