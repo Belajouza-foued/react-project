@@ -22,15 +22,13 @@ import persone3 from '../pages/images/image_5.jpg'
 import proud1 from '../assets/icons/success-story (1).png'
 import React, { useState, useEffect } from "react";
 /*npm install react-simple-typewriter*/
-
-import { Typewriter } from "react-simple-typewriter"; // ✅ Ajout de Typewriter
-
 const Home = () => {
             const [isExpanded, setIsExpanded] = useState(false);
         const [isExpandedNutrition, setIsExpandedNutrition] = useState(false);
         const [isExpandedDietetique, setIsExpandedDietetique] = useState(false);
         const [displayText, setDisplayText] = useState("");
-        const [count, setCount] = useState(0);
+        const [index, setIndex] = useState(0);
+        
         
         const [isVisible, setIsVisible] = useState(false);
                const text = "Bienvenue sur WorldFitness !"; // ✅ Définition du texte
@@ -46,20 +44,14 @@ const Home = () => {
           setIsExpandedDietetique(!isExpandedDietetique);
         };
         useEffect(() => {
-          let i = 0;
-          const interval = setInterval(() => {
-            setDisplayText(text.substring(0, i));
-            i++;
-            if (i > text.length) clearInterval(interval);
-          }, speed);
-          return () => clearInterval(interval);
-        }, []);
-        useEffect(() => {
-          let interval = setInterval(() => {
-            setCount((prev) => (prev < 100 ? prev + 1 : 3000));
-          }, 50);
-          return () => clearInterval(interval);
-        }, []);
+          if (index < text.length) {
+            const timeout = setTimeout(() => {
+              setDisplayText(text.substring(0, index + 1));
+              setIndex(index + 1);
+            }, speed);
+            return () => clearTimeout(timeout);
+          }
+        }, [index, text, speed]);
         useEffect(() => {
           const handleScroll = () => {
             const position = window.scrollY;
@@ -80,24 +72,11 @@ const Home = () => {
   <div className='container-fluid bg-light-subtle'>
  <div className="carousel-header">
  
-  <div className='col-lg-12 col-sm-12'>
-  
- <h2 style={{color:"#1089ff"}}>{displayText}</h2> {/* ✅ Affichage progressif du texte */}
-      <Typewriter
-        words= {["Bienvenue sur mon site !", "Découvrez nos services", "Contactez-nous"]}
-        loop={true}
-        cursor
-        cursorStyle="_"
-        typeSpeed={70}
-        deleteSpeed={50}
-        delaySpeed={1000}
-      />
-      
-         <h2>Visiteurs : {count}</h2>;
-             
-         
-
-            <div id="carouselId" className="carousel slide" data-bs-ride="carousel">
+  <div className='col-lg-12'>
+    <div className='d-flex justify-content-center  pt-3 mb-3'>
+   <h2 className=''style={{color:"#1089ff"}}>{displayText}</h2> {/* ✅ Affichage progressif du texte */}
+ </div>
+       <div id="carouselId" className="carousel slide" data-bs-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-bs-target="#carouselId" data-bs-slide-to="0" className="active"></li>
                     <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>

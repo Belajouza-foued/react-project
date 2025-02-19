@@ -2,51 +2,43 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../pages/styles/Blog.css'
-import { Link } from "react-router-dom";
-import BlogImage from "../pages/images/image_1.jpg"
+import { useEffect, useState } from "react";
+
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Les bienfaits du fitness quotidien",
-      date: "2025-03-01",
-      excerpt: "Découvrez comment le fitness quotidien peut transformer votre vie, améliorer votre santé et booster votre énergie.",
-      image: BlogImage // Assure-toi que le chemin correspond à ton projet
-    },
-    {
-      id: 2,
-      title: "Nutrition et entraînement: le duo gagnant",
-      date: "2025-03-10",
-      excerpt: "Apprenez à combiner une alimentation équilibrée avec des séances d’entraînement efficaces pour obtenir des résultats optimaux.",
-      image: "assets/images/blog2.jpg"
-    },
-    {
-      id: 3,
-      title: "Conseils pour rester motivé en salle de sport",
-      date: "2025-03-20",
-      excerpt: "Restez motivé et persévérant grâce à ces astuces simples et efficaces qui feront de votre séance de sport un moment agréable.",
-      image: "assets/images/blog3.jpg"
-    }
-  ];
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((oldProgress) => {
+        if (oldProgress === 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return oldProgress + 10;
+      });
+    }, 500);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="blog-container">
-    <h1 className="blog-title">WorldFitness Blog</h1>
-    <div className="blog-posts">
-      {blogPosts.map(post => (
-        <div key={post.id} className="blog-post">
-          <img src={post.image} alt={post.title} className="blog-post-image" />
-          <div className="blog-post-content">
-            <h2 className="blog-post-title">{post.title}</h2>
-            <p className="blog-post-date">{post.date}</p>
-            <p className="blog-post-excerpt">{post.excerpt}</p>
-            <Link to={`/help/${post.id}`} className="blog-read-more">Lire la suite</Link>
-          </div>
-        </div>
-      ))}
+    
+  <>
+  <div className="container">
+   <div className="blog-container">
+  <div className="container p-5 my-5 bg-primary text-white" style={{borderRadius:"10px"}}>
+  <h1 className="text-white">Our blogs</h1>
+  <p className="d-flex text-align-center  justify-content-center">This container has a blue background color and a white text, and some extra padding and margins.</p>
+</div>  
+  </div>
+  <div>
+      <div className="progress-bar" style={{ width: `${progress}%` }}></div>
+      <p>{progress}%</p>
     </div>
   </div>
+  </>
   );
-};
-
+ 
+}
 export default Blog;

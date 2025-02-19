@@ -35,7 +35,7 @@ const App = () => {
 
     const location = useLocation();
   const hideNavbarFooter = ["/admin", "/addAdmin", "/login", "/profile", "/register","/userDashboard", 
-    "/createRegister", "/createLogin", "/createProfile", "/sideBar", "/dashboard","/family","/graphic","/addGraphic","/blog"].some(path => location.pathname.startsWith(path));
+    "/createRegister", "/createLogin", "/createProfile", "/sideBar", "/dashboard","/family","/graphic","/addGraphic"].some(path => location.pathname.startsWith(path));
     useEffect(() => {
       // Simulez un délai de chargement avant d'afficher le contenu
       const timer = setTimeout(() => {
@@ -82,6 +82,8 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="/admin/:id" element={<EditAdmin />} />
+        <Route path="blog" element={<Blog />} />
+        
        
       </Routes>
       {!hideNavbarFooter && <Footer />}
