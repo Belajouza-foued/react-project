@@ -6,5 +6,34 @@
 }
 .logo-contact {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
+  gap: 70px;
+  transition: transform 0.3s ease-in-out;
+   
 }
+.logo-contact:hover {
+   transform: scale(1.1); ;
+   
+}
+.title-contact {
+    color: #f0f0f0;
+}
+
+.text-start {
+    font-size: 80px;  /* Taille de la police */
+    font-weight: bold;
+    display: flex;
+    background: linear-gradient(90deg, #0057b7 30%, #1089ff 70%); /* Dégradé bleu */
+   
+}
+.map-contact {
+    color: #f0f0f0;
+    background-color: #1089ff;
+}
+.map-contact:hover {
+    color: #1089ff;
+    background-color: #f0f0f0;
+}
+
+
+

@@ -38,30 +38,28 @@ function CreateLogin() {
             height: '600px' // Ajustez la hauteur selon vos besoins
           }}>
             <div className='row'>           
-                <div className='col-lg-12 col-sm-12 login-position '>
-                <div className="col-lg-12 col-sm-12 flex-container mt-2">
-  <h2 className="login-title pt-3">Login:</h2>
-</div>
-                    <form className="col-lg-12 col-sm-12 form-login pt-2" onSubmit={CreatehandleLogin}>
-
+                <div className='col-lg-12  login-position '>
+                  
+                    <form className="col-lg-12 form-login pt-2" onSubmit={CreatehandleLogin}>
+                    <h3 className="login-title mt-5 pt-5 ps-5">Login:</h3>
                         
-                        <div className='position-user col-lg-12 col-sm-12 pt-5'>
+                        <div className=' '>
                           <input
                                 type="text"
                                 placeholder='firstName'
 
                                 value={firstName}
                                 onChange={(e) => setFirstName(e.target.value)}
-                                className='form-control first-back'style={{background:'none'}}
+                                className='form-control position-user'style={{background:'none'}}
                             />
                         </div>
-                        <div className="position-relative col-lg-12 col-sm-12 pt-5 ">
+                        <div className="position-relative col-lg-12 pt-5 ">
                         <input
                     type="text"
                     placeholder='lastName '
                      value={lastName}
                     onChange={(e) => setLastName(e.target.value)}z
-                    className='form-control first-back'style={{background:'none'}}                    
+                    className='form-control 'style={{background:'none'}}                    
                 />
                         </div>
                         <div className='row mt-3 mb-3'>
@@ -73,7 +71,7 @@ function CreateLogin() {
     </div>
    
 
-                        <div className='col-lg-12 col-sm-12  button-login pt-4'>
+                        <div className='col-lg-12 button-login pt-4'>
                         <button type="submit" className='btn 
                         btn-primary
                          form-control log-button'>Login</button>

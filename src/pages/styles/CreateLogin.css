@@ -1,10 +1,8 @@
 
 
-.login-position {
-
-   
-    height: 450px;
- }
+.form-control .position-user  {
+width: 70%;
+}
 .flex-container {
     text-align: center;
     justify-content: center;
@@ -22,17 +20,6 @@
     font-size: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.first-back::placeholder {
-    color: #1089ff;
-    opacity: 1; /* Assurez-vous que l'opacité est à 1 pour que le blanc soit visible */
-  }
-  .first-back {
-    color: black;
-    border: 2px solid black; /* Augmentez la taille de la bordure */
-    padding: 10px; /* Ajoutez du padding pour plus d'espace à l'intérieur */
-    border-radius: 5px; /* Facultatif : ajoutez un rayon pour arrondir les coins */
-  }
-  .first-back:focus {
-    border-color: blue; /* Change la couleur de la bordure en focus */
-    outline: none; /* Supprime l'effet de contour par défaut */
-  }
+
+
+ 

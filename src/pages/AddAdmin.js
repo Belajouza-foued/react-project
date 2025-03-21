@@ -85,8 +85,8 @@ render() {
     <div className="container add-container">
         <div className="row">
         <div className="col-lg-12 col-sm-12">
-          <h3 style={{fontWeight:"bolder", color:"black"}}>Contactez nous par email</h3>
-          <p className="pt-2" style={{  fontFamily: "Arial, sans-serif" }}>Afin de contacter le support Le Sportif, veuillez remplir le formulaire suivant en remplissant l'ensemble des informations.
+          <h3 style={{fontWeight:"bolder", color:"black",fontFamily: "Arial, sans-serif" }}>Contactez nous par email:</h3>
+          <p className="pt-2" style={{fontFamily: "Times New Roman" }}>Afin de contacter le support Le Sportif, veuillez remplir le formulaire suivant en remplissant l'ensemble des informations.
              Nous vous répondrons dans les 24h.</p>
         </div>
             <div className="col-lg-3 col-sm-12 pt-5 add-img">
@@ -99,7 +99,7 @@ render() {
                   
         </div>
       ) : (
-        <div className="container bg-info form-container">
+        <div className="container form-container">
           <div className="form-group">
             <label htmlFor="nom">nom</label>
             <input

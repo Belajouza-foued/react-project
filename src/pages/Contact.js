@@ -9,18 +9,20 @@ import lotto from '../pages/images/lotto.png'
 import newBalance from '../pages/images/new-balance.png'
 import atheletica from '../pages/images/atheletica.avif'
 import adidas from '../pages/images/adidas.jpg'
+import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div className="container-fluid">
         <div className="row">
             <div className="col-lg-12 col-sm-12">
-            <div className="containter-fluid mt-5 text-start" style={{padding:"5%", backgroundColor:" #1089ff", opacity:"90%"}}>
-                    <h1 className="title-contact" style={{ textAlign: "left", fontSize:"60px", color:"white" }}>Contactez-nous</h1>
-                    <p className="text-contact" style={{ color: "white" }}>Contactez nous</p>
+            <div className="containter-fluid mt-5 text-start " style={{padding:"5%", opacity:"90%"}}>
+                    <h4 className="text-center mx-auto ps-2" style={{ textAlign: "left", fontSize:"60px", color:"#f0f0f0" }}>
+                      <Link className="pe-2" to="/" style={{textDecoration:"none", color:"#f0f0f0"}}>Home /</Link>Contactez-nous</h4>
+                  
 
                 </div>
             </div>
-            <div className="col-lg-8 col-sm-12 mb-5">
+            <div className="col-lg-12 col-sm-12 mb-5">
              <div className="mt-5">
                         <AddAdmin /> {/* Affiche le composant ici */}
         </div>
@@ -35,18 +37,22 @@ const Contact = () => {
         </div>
             </div>
 
-            <div className="col-lg-4 col-sm-12 mt-5">
-              <div className="map-contact mt-5" style={{backgroundColor:" #1089ff", padding:"5%", opacity:"90%", borderRadius:"8px"}}>
-                <h3 className="text-contact" style={{ color: "white" }}>Besoin d'aide?</h3>
-                <strong style={{ color: "white" }}>+216 58 860 181</strong>
-               <hr style={{ color: "white", border:"2px solid"}}></hr>
-                <p className="text-contact" style={{ color: "white" }}>Adress : Avenue khezam sousse</p>
-              </div>
-      <h2>Carte interactive</h2>
+            <div className="col-lg-8 col-sm-12 mb-3 ps-5">
+             
+      <h1 className="text-left pb-2">Carte interactive :</h1>
       <iframe
+      className="pb-3 mt-4"
         title="Google Maps"
      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.1535222957637!2d10.600185575258116!3d35.845238920948034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd8b00157e66eb%3A0x8b4bca4156e550a8!2sKhezama%20Ouest!5e0!3m2!1sfr!2stn!4v1738170405813!5m2!1sfr!2stn"  style={{width:"100%", height:"400px",border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
              </iframe>
+             </div>
+             <div className="col-lg-4 col-sm-12 mb-5 pe-5 pb-5 mt-4">
+             <div className="map-contact mt-5" style={{ padding:"20%", opacity:"90%", borderRadius:"8px"}}>
+                <h4 className="text-contact mt-5" >Besoin d'aide?</h4>
+                <strong >+216 58 860 181</strong>
+               <hr style={{  border:"2px solid"}}></hr>
+                <p className="text-contact" >Adress : Avenue khezam sousse</p>
+              </div>
              </div>
              
     </div>

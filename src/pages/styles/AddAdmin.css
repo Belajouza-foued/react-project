@@ -1,5 +1,6 @@
 .add-container {
     padding-top: 50px;
+  
 }
 .button-add {
     display: flex;
@@ -13,7 +14,7 @@
 }
 .form-container {
     padding-top: 30px;
- 
+     background: linear-gradient(90deg, #1089ff 30%, #90c5ff 70%);
 
 }
 
@@ -21,17 +22,9 @@
 
 
 .add-img img {
- width: 350px; /* Ajuste la taille de l'image à son conteneur */
-  max-width: 350px; /* Réduit la taille maximale de l'image */
+ width: 250px; /* Ajuste la taille de l'image à son conteneur */
+  max-width: 300px; /* Réduit la taille maximale de l'image */
   height: 310px; /* Maintient les proportions de l'image */
-  
- 
-  
-}
+  }
 
 
-.form-container {
-
- 
-
-}
