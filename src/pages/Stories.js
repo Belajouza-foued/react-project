@@ -93,13 +93,13 @@ const Stories = () => {
    </div>
  </div>
   {/*add accordion*/}
-  <div className="accordion-item pt-5">
+  <div className="accordion-item mb-5">
   <h2 className="accordion-header">
     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-  
+  Notre corps produit de la vitamine D 
     </button>
   </h2>
-  <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+  <div id="flush-collapseOne" className="accordion-collapse collapse " data-bs-parent="#accordionFlushExample">
     <div className="accordion-body">Notre corps produit de la vitamine D grâce à la lumière du soleil, plus précisément grâce aux rayons UV-B. En été, lorsque le soleil est haut dans le ciel, le rayonnement UV-B est suffisamment fort pour stimuler la production de vitamine D dans la peau. 
     Le corps peut stocker la vitamine D produite dans les tissus adipeux et musculaires.<strong>Mais en hiver, le soleil est plus bas, le rayonnement UV-B est plus faible et les jours sont plus courts.
   De plus, pendant la saison froide, nous restons généralement à l'intérieur et couvrons notre peau de vêtements.</strong>
@@ -143,7 +143,7 @@ const Stories = () => {
                  </div>
 
                 
-                <Link to="https://www.fitness.com/fr/articles/la-force-des-sels-mineraux" className='mt-5'><span>La force des sels minéraux</span> <FontAwesomeIcon icon={faChevronRight} className='mt-5'/></Link>
+                <Link to="https://www.fitness.com/fr/articles/la-force-des-sels-mineraux" className='mt-5' style={{textDecoration:"none"}}><span>La force des sels minéraux</span> <FontAwesomeIcon icon={faChevronRight} className='mt-5'/></Link>
               
 
 			</div>
@@ -165,10 +165,10 @@ const Stories = () => {
     {/* Texte à côté de l'image */}
     <div className="col">
       <div className="entry-title mt-2">
-                <Link to="https://www.fitness.com/fr/articles/un-coach-sportif-au-poignet">
+                <Link to="https://www.fitness.com/fr/articles/un-coach-sportif-au-poignet" style={{textDecoration:"none"}}>
             Un coach sportif au poignet
           </Link>
-              <div className="entry-meta">
+              <div className="entry-meta" >
           <ul>
             <li>01/14/21</li>
           </ul>
@@ -186,7 +186,7 @@ const Stories = () => {
 </div>
 <div className='col'>
   <div className='test-2'>
-        <a href="https://www.fitness.com/fr/articles/la-force-des-sels-mineraux">La force des sels minéraux</a>
+        <a href="https://www.fitness.com/fr/articles/la-force-des-sels-mineraux" style={{textDecoration:"none"}}>La force des sels minéraux</a>
         <div className='test-ul'>
       <ul>
         <li>6/12/10</li>
@@ -207,7 +207,7 @@ const Stories = () => {
 </div>
 <div className='col'>
   <div className='test-2'>
-  <a href="https://www.fitness.com/fr/articles/maigrir-sans-regime">Maigrir sans régime?</a>
+  <a href="https://www.fitness.com/fr/articles/maigrir-sans-regime" style={{textDecoration:"none"}}>Maigrir sans régime?</a>
     <div className='test-ul'>
       <ul>
         <li>6/12/10</li>
@@ -221,14 +221,14 @@ const Stories = () => {
   <div className='col-auto'>
     <div className='test-img'>
     <Link to="/nutrition" title='test-image'>
-    <img src={the} style={{height:"55px"}} className='img-fluid image-small' alt='coach test' loading='lazy'/>
+    <img src={the} style={{height:"55px"}} className='img-fluid image-small'  alt='coach test' loading='lazy'/>
     </Link>
 
   </div>
 </div>
 <div className='col'>
   <div className='test-2'>
-      <a href="https://www.fitness.com/fr/articles/le-the-vert-la-boisson-miracle">Le thé vert – La boisson miracle!</a>
+      <a href="https://www.fitness.com/fr/articles/le-the-vert-la-boisson-miracle" style={{textDecoration:"none"}}>Le thé vert – La boisson miracle!</a>
       <div className='test-ul'>
       <ul>
         <li>6/12/10</li>
@@ -241,15 +241,15 @@ const Stories = () => {
       <div className='row -align-items-center'>
   <div className='col-auto'>
     <div className='test-img'>
-    <Link to="/nutrition" title='test-image'>
-    <img src={entrainement}  style={{height:"55px"}} className='img-fluid image-small' alt='coach test' loading='lazy'/>
+    <Link to="/nutrition" title='test-image' style={{textDecoration:"none"}}>
+    <img src={entrainement}  style={{height:"55px"}} className='img-fluid image-small'  alt='coach test' loading='lazy'/>
     </Link>
 
   </div>
 </div>
 <div className='col'>
   <div className='test-2'>
-      <Link>Entrainement pour bonne sante</Link>
+      <Link style={{textDecoration:"none"}}>Entrainement pour bonne sante</Link>
       <div className='test-ul'>
       <ul>
         <li>6/12/10</li>
@@ -274,7 +274,7 @@ const Stories = () => {
     </div>
     <div className='col'>
   <div className='test-2'>
-      <Link>health c est la vie</Link>
+      <Link style={{textDecoration:"none"}}>health c est la vie</Link>
       <div className='test-ul'>
       <ul>
         <li>6/12/10</li>
@@ -287,7 +287,7 @@ const Stories = () => {
 <div className='row -align-items-center'>
   <div className='col-auto'>
     <div className='test-img'>
-    <Link to="https://www.mega-gear.net/fr/blog/207-exercices-pour-les-fessiers-programme-efficace" title='test-image'>
+    <Link to="https://www.mega-gear.net/fr/blog/207-exercices-pour-les-fessiers-programme-efficace"  title='test-image'>
     <img src={decor}  style={{height:"55px"}} className='img-fluid image-small' alt='coach test' loading='lazy'/>
     </Link>
 
@@ -295,7 +295,7 @@ const Stories = () => {
 </div>
 <div className='col'>
   <div className='test-2'>
-      <Link to="https://www.mega-gear.net/fr/blog/207-exercices-pour-les-fessiers-programme-efficace">5 exercices efficaces pour fessiers</Link>
+      <Link to="https://www.mega-gear.net/fr/blog/207-exercices-pour-les-fessiers-programme-efficace" style={{textDecoration:"none"}}>5 exercices efficaces pour fessiers</Link>
       <div className='test-ul'>
       <ul>
         <li>6/12/10</li>

@@ -1,6 +1,10 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import image30 from './images/adidas.jpg';
+import image40 from './images/atheletica.avif';
+import image50 from './images/coach-1.jpg';
+import image60 from './images/accurate-sit-ups-gym.jpg';
 import AddAdmin from "./AddAdmin";
 import '../pages/styles/Contact.css'
 import nike from '../pages/images/nike.webp'
@@ -17,7 +21,7 @@ const Contact = () => {
             <div className="col-lg-12 col-sm-12">
             <div className="containter-fluid mt-5 text-start " style={{padding:"5%", opacity:"90%"}}>
                     <h4 className="text-center mx-auto ps-2" style={{ textAlign: "left", fontSize:"60px", color:"#f0f0f0" }}>
-                      <Link className="pe-2" to="/" style={{textDecoration:"none", color:"#f0f0f0"}}>Home /</Link>Contactez-nous</h4>
+                      <Link className="pe-2" to="/" style={{textDecoration:"none", color:"#f0f0f0"}}></Link>Contactez-nous</h4>
                   
 
                 </div>
@@ -53,6 +57,16 @@ const Contact = () => {
                <hr style={{  border:"2px solid"}}></hr>
                 <p className="text-contact" >Adress : Avenue khezam sousse</p>
               </div>
+             </div>
+             <div className="col-12">
+             <div className="test-carroussel">
+              <div className="image-parent">
+   <img src={image30} className="image-40" alt=""/>
+<img src={image40} className="image1-40" alt=""/>
+<img src={image50} className="image1-40" alt=""/>
+<img src={image60} className="image1-40" alt=""/>  
+              </div>
+             </div>
              </div>
              
     </div>

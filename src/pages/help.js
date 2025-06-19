@@ -77,7 +77,7 @@ const help = () => {
   <div className="row">
   
     <div className="col-lg-4 col-md-6 mb-4">
-      <div className="text-center">
+      <div className="text-center personal-img">
         <img src={Help4} className="img-fluid mb-3" alt="Personal Training"/>
         <h5>Personal coach</h5>
         <p>Des séances individuelles avec des entraîneurs experts pour adapter votre entraînement à vos besoins et objectifs spécifiques.</p>

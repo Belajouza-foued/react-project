@@ -22,8 +22,8 @@
 
 
 .add-img img {
- width: 250px; /* Ajuste la taille de l'image à son conteneur */
-  max-width: 300px; /* Réduit la taille maximale de l'image */
+ width: 350px; /* Ajuste la taille de l'image à son conteneur */
+  max-width: 350px; /* Réduit la taille maximale de l'image */
   height: 310px; /* Maintient les proportions de l'image */
   }
 

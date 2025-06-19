@@ -20,7 +20,7 @@ function Profile() {
             const token = localStorage.getItem('token');
               // Si aucun token, rediriger vers la page de login
               if (!token) {
-                navigate('/userDashboard');
+                navigate('/home');
                 return;
             }
             try {
