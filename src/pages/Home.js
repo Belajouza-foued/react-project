@@ -10,16 +10,16 @@ import coach1 from '../pages/images/coach-1.jpg'
 import staff1 from '../pages/images/staff-1.jpg'
 import staff2 from '../pages/images/staff-2.jpg'
 import staff3 from '../pages/images/staff-3.jpg'
-import staff4 from '../pages/images/staff-4.jpg'
+import staff4 from '../pages/images/person_1.jpg'
 import staff6 from '../pages/images/staff-6.jpg'
 import staff10 from '../pages/images/dumbbell-ray.svg'
 import staff7 from '../assets/icons/data.png'
 import staff8 from '../assets/icons/loyalty-program.png'
 import staff9 from '../assets/icons/meal.png'
+import staff15 from '../pages/images/person_2.jpg'
 import persone1 from '../pages/images/person-1.jpg'
 import persone2 from '../pages/images/person-2.jpg'
 import persone3 from '../pages/images/image_5.jpg'
-import proud1 from '../assets/icons/success-story (1).png'
 import React, { useState, useEffect } from "react";
 /*npm install react-simple-typewriter*/
 const Home = () => {
@@ -69,40 +69,41 @@ const Home = () => {
   return (
     <>
    
-  <div className='container-fluid bg-light-subtle'>
+  <div className='container-fluid bg-light-subtle mt-5'>
  <div className="carousel-header">
  
   <div className='col-lg-12'>
-    <div className='d-flex justify-content-center  pt-3 mb-3'>
+    <div className='d-flex justify-content-center  pt-3 mb-3 tap-text'>
    <h2 className=''style={{color:"#1089ff"}}>{displayText}</h2> {/* ✅ Affichage progressif du texte */}
  </div>
        <div id="carouselId" className="carousel slide" data-bs-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-bs-target="#carouselId" data-bs-slide-to="0" className="active"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
-                </ol>
-                <div className="carousel-inner" role="listbox">
-                    <div className="carousel-item active">
-                        <img src={image2} className="img-fluid" alt="pour femme enceinte"/>
-                        <div className="carousel-caption">
-                            <div className="text-center p-4">
-                                <h4 className="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Welcome to wordFitness</h4>
+      <div className="carousel-inner" role="listbox">
+    <div className="carousel-item active">
+  <img src={image2} className="img-fluid" alt="pour femme enceinte"/>
+     <div className="carousel-caption">
+           <div className="text-center p-4">
+   <h4 className="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Welcome to wordFitness</h4>
                               
-                                <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Fitness pour femme enceinte et debutante</h1>
-                                <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition.Transformez votre santé en changeant vos habitudes, 
-                                </p>
-                                <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s"  to="https://www.mega-gear.net/fr/blog/231-programme-femmes-debutant-musculation">More Details</Link>
-                                 </div>
-                        </div>
+       <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Fitness pour femme enceinte et debutante</h1>
+         <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp simple-p" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition.Transformez votre santé en changeant vos habitudes, 
+                </p>
+                 <div className='button-res-1'>
+       <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-6 wow fadeInUp" data-wow-delay="0.7s"  to="https://www.mega-gear.net/fr/blog/231-programme-femmes-debutant-musculation">More Details</Link>
+       </div>
+             </div>
+            </div>
                     </div>
                     <div className="carousel-item">
                         <img src={image1} className="img-fluid" alt="pour femme"/>
                         <div className="carousel-caption">
                             <div className="text-center p-4">
-                                                              <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Programe musculation</h1>
-                                <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition.Brûler,sécher
+                                 <h4 className="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Programe wordFitness</h4>
+                       <h1 className="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Programe musculation pour femmes enceintes</h1>
+                                <p className="text-white mb-4 mb-md-5 fs-5 wow fadeInUp simple-p" data-wow-delay="0.5s">Déverrouillez votre potentiel grâce à une bonne nutrition.Brûler,sécher
                                 </p>
-                                <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp" data-wow-delay="0.7s" to="https://www.mega-gear.net/fr/blog/category/4-programmes-de-musculation">More Details</Link>
+                                <div className='button-res-1'>
+                           <Link className="btn btn-primary border-secondary rounded-pill text-white py-3 px-6 wow fadeInUp " data-wow-delay="0.7s" to="https://www.mega-gear.net/fr/blog/category/4-programmes-de-musculation">More Details</Link>
+                           </div>
                             </div>
                         </div>
                     </div>
@@ -122,7 +123,7 @@ const Home = () => {
       
        
         <div className='col-lg-12 col-sm-12 pt-5'>
-          <div style={{ paddingTop: "", textAlign: "center", justifyContent: "center",color: "#1089ff" }}>
+          <div className='program-hiden'>
       <h2 className={isVisible ? "visible" : "hidden"}>Our program and plans !</h2>
       <style>{`
         .hidden { opacity: 0; transform: translateY(20px); transition: all 0.5s; }
@@ -132,7 +133,7 @@ const Home = () => {
           </div>
         <section className="ftco-section ftco-services ">
      
-    	<div className="container mt-5 ">
+    	<div className="container mt-5 container-pro">
         <div className='col-lg-12 col-sm-12'>
     		<div className="row">
         
@@ -140,13 +141,13 @@ const Home = () => {
 					<div className="d-block services-wrap text-center">
 					  <div className="img-1b ms-4"></div>
 					  <div className="media-body p-2">
-						<Link className="mt-5" style={{textDecoration:"none", fontSize:'20px'}} to="https://www.mega-gear.net/fr/blog/231-programme-femmes-debutant-musculation">Programme pour débutantes</Link>
+						<Link className="mt-5 Link-pro" style={{textDecoration:"none", fontSize:'20px'}} to="https://www.mega-gear.net/fr/blog/231-programme-femmes-debutant-musculation">Programme pour débutantes</Link>
 									         <div>
-      <p>
+      <p className='text-pro'>
       Un programme sur mesure pour aider les débutantes à démarrer leur parcours de fitness en toute confiance.</p>
-        {isExpanded && ( <p id="more-text"> Ce programme est conçu pour renforcer la confiance en soi des participantes, en leur offrant des séances adaptées à leur niveau. Chaque exercice est conçu pour être accessible tout en garantissant des résultats progressifs. De plus, des conseils nutritionnels seront fournis pour accompagner votre entraînement et améliorer vos performances. Rejoignez-nous et commencez dès aujourd'hui à transformer votre santé !
+        {isExpanded && ( <p id="more-text" className='text-pro'> Ce programme est conçu pour renforcer la confiance en soi des participantes, en leur offrant des séances adaptées à leur niveau. Chaque exercice est conçu pour être accessible tout en garantissant des résultats progressifs. De plus, des conseils nutritionnels seront fournis pour accompagner votre entraînement et améliorer vos performances. Rejoignez-nous et commencez dès aujourd'hui à transformer votre santé !
        </p> )}
-      <button className="btn btn-primary btn-outline-primary"id="read-more-btn"  onClick={toggleText}  >
+      <button className="btn-pro btn btn-primary btn-outline-primary"id="read-more-btn"  onClick={toggleText}  >
         {isExpanded ? 'Read less' : 'Read more'}
       </button>
     </div>
@@ -159,14 +160,14 @@ const Home = () => {
             <div className="d-block services-wrap text-center">
               <div className="img-2b ms-3"></div>
               <div className="media-body p-2">
-                <Link to="/nutrition" style={{textDecoration:"none", fontSize:'20px'}} className="">Plan nutritionel</Link>
-			 <p>Des plans nutritionnels équilibrés pour atteindre vos objectifs santé et bien-être.Avec alimentatione bien équilibré</p>
-        {isExpandedNutrition && ( <p id='more-text-nutrition'> Un plan nutritionnel bien conçu est essentiel pour atteindre vos objectifs de santé et de bien-être.
+                <Link to="/nutrition Link-pro" style={{textDecoration:"none", fontSize:'20px'}} className="">Plan nutritionel</Link>
+			 <p className='text-pro'>Des plans nutritionnels équilibrés pour atteindre vos objectifs santé et bien-être.Avec alimentatione bien équilibré</p>
+        {isExpandedNutrition && ( <p id='more-text-nutrition' className='text-pro'> Un plan nutritionnel bien conçu est essentiel pour atteindre vos objectifs de santé et de bien-être.
         Que vous cherchiez à perdre du poids, à gagner en muscle ou simplement à améliorer votre alimentation, un plan personnalisé vous aidera à suivre une alimentation équilibrée et adaptée à vos besoins spécifiques.</p>
         )}
 			
 			                                
-  <button  className="btn btn-primary btn-outline-primary mt-2" id="read-more-btn-nutrition"  onClick={toggleNutrition}>
+  <button  className="btn-pro  btn btn-primary btn-outline-primary mt-2" id="read-more-btn-nutrition"  onClick={toggleNutrition}>
   {isExpandedNutrition ? 'Read less' : 'Read more'}
   </button>
 
@@ -177,12 +178,12 @@ const Home = () => {
             <div className="d-block services-wrap text-center">
               <div className="img-b3 ms-3"></div>
               <div className="media-body mt-3 ">
-            <Link to="https://www.mega-gear.net/fr/blog/category/6-exercices-musculation" style={{textDecoration:"none", fontSize:'20px'}}className="mb-1">Programe haut-niveau</Link>
-                <p> Nous évoquerons les exercices de base pour développer la masse musculaire qui ciblent chaque muscle en particulier.</p>
+            <Link to="https://www.mega-gear.net/fr/blog/category/6-exercices-musculation" style={{textDecoration:"none", fontSize:'20px'}}className="mb-1 Link-pro">Programe haut-niveau</Link>
+                <p className='text-pro'> Nous évoquerons les exercices de base pour développer la masse musculaire qui ciblent chaque muscle en particulier.</p>
 				
         
 					{isExpandedDietetique && (
-            <div id="more-text-dietetique" className='more-text-dietetique'>
+            <div id="more-text-dietetique" className='more-text-dietetique text-pro'>
           
 					<p>Notre programme diététique inclut :</p>
 					<ul>
@@ -195,7 +196,7 @@ const Home = () => {
           )}
                
                 
-  <button  className="btn btn-primary btn-outline-primary" id="read-more-btn-dietetique"  onClick={toggleDietetique}>
+  <button  className="btn-pro btn btn-primary btn-outline-primary" id="read-more-btn-dietetique"  onClick={toggleDietetique}>
   {isExpanded ? 'Read less' : 'Read more'}
   </button>
 
@@ -217,29 +218,29 @@ const Home = () => {
         <img
           src={coach}
           alt="Trendy Pants and Shoes"
-          className="img-fluid rounded-start"
+          className="img-fluid rounded-start coach-pro"
         />
       </div>
       <div className="col-lg-8 col-sm-12">
         <div className="card-body pt-5">
           <h5 className="card-title title-1">Welcome to Healthcare</h5>
-          <p className="card-text fs-4">
+          <p className="card-text">
           Prendre soin de sa santé de manière naturelle est l une des meilleures façons 
           d améliorer son bien-être global.
           </p>
-          <p className="card-p fs-6 ">
+          <p className="card-p">
           En adoptant des habitudes saines, comme une alimentation équilibrée, une activité physique régulière et une bonne 
           gestion du stress, vous pouvez renforcer votre corps et votre esprit.
           </p>
-          <p className="card-p fs-6">
+          <p className="card-p">
           La santé naturelle se concentre sur des approches douces et préventives, privilégiant les remèdes issus de la nature et des changements de mode de vie pour favoriser un équilibre durable. 
           Cela vous permet de maintenir votre vitalité tout en respectant le rythme de votre corps.
           </p>
           
             <img className='coach-logo mt-3' src={coach1} alt=''/>
            <div className='text-logo pt-1 mt-3'>
-            <p className="ps-3 fs-5 foued custom pt-2">Foued belajouza</p>
-            <p className="ps-3 pb-2 custom" >rihgab khouaja</p>
+            <p className="ps-3  foued custom pt-2">Foued belajouza</p>
+            <p className="ps-3 pb-2 custom" >rihab khouaja</p>
            </div>
           
         </div>
@@ -254,7 +255,7 @@ const Home = () => {
 						<div className="consultation w-100 text-center px-4 px-md-5">
 							<h3 className="mb-4">Healthcare Services</h3>
 							<p className='river'>A small river named Duden flows by their place and supplies</p>
-							<Link to ="#"className="btn-custom">See Services</Link>
+							<Link to ="services"className="btn-custom">See Services</Link>
 						</div>
 					</div>
 					<div className="col-md-6 col-sm-12 d-flex align-items-stretch">
@@ -323,6 +324,7 @@ const Home = () => {
 				</div>
 			</div>
 		</section>
+    <div className='container'>
     <div className=" col-lg-12 col-sm-12 pt-5">
   <h1 className="feedback">FeedBack Clients</h1>
 
@@ -362,7 +364,7 @@ const Home = () => {
       <div  className="container">
         <div  className="row">
           <div  className="col-lg-4">
-            <div  className="card">
+            <div  className="card card-expert">
               <img
                 src={staff1}
                 className="card-img-top"
@@ -379,7 +381,7 @@ const Home = () => {
           </div>
 
           <div className="col-lg-4 col-sm-12 d-none d-lg-block">
-            <div className="card">
+            <div className="card card-expert">
               <img
                 src={staff2}
                 className="card-img-top"
@@ -396,7 +398,7 @@ const Home = () => {
           </div>
 
           <div  className="col-lg-4 d-none d-lg-block col-sm-12">
-            <div  className="card">
+            <div  className="card card-expert">
               <img
                 src={staff3}
                 cl className="card-img-top"
@@ -411,6 +413,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -420,7 +423,7 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-12">
-            <div className="card">
+            <div className="card card-expert">
               <img
                 src={staff4}
                 className="card-img-top"
@@ -437,7 +440,7 @@ const Home = () => {
           </div>
 
                <div className="col-lg-4 d-none d-lg-block col-sm-12">
-            <div className="card">
+            <div className="card card-expert">
               <img
                 src={staff6}
                 className="card-img-top"
@@ -453,9 +456,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-12">
-            <div className="card">
+            <div className="card card-expert">
               <img
-                src={staff4}
+                src={staff15}
                 className="card-img-top"
                 alt="Fissure in Sandstone"
               />
@@ -479,22 +482,20 @@ const Home = () => {
 </div>
 </div>
 </div>
-<div className=" col-lg-12 col-sm-12">
-  <h5 className="feedback-1">others services</h5>
-  <h1 className='feedback-2'>How it works</h1>
 </div>
-<div className='container'>
+
+<div className='container max-container'>
   <div className='row'>
   <div className='col-lg-3 col-sm-12'>
 <div className="card text-center modified">
   <div className="bg-image hover-overlay ripple pt-5" data-mdb-ripple-color="light">
-  <img  src={staff10}   className="programe-icon " alt="Fissure in Sandstone"
+  <img  src={staff10}   className="programe-icon" alt="Fissure in Sandstone"
               />
     
   </div>
  
-  <div className="card-body">
-    <h5 className="card-title">Sceances d'entrainement</h5>
+  <div className="card-body ">
+    <h5 className="card-title card-title-1">Sceances d'entrainement</h5>
     <p className="card-text">
     Un entraînement rapide et efficace qui combine 
     des exercices de haute intensité pour des résultats optimaux en un temps record.
@@ -571,70 +572,20 @@ const Home = () => {
 
 
 {/*new 1 carrousel*/}
-<div className="new-carroussel bg-light">
-  <div className="new-slides">
-    
-    <div className="new-slide bg-whight">
-      <div className="slide-image">
-        <img src={persone2} alt="" className="img-fluid h-100 w-100" />
-      </div>
-     
-      <div className="slide-text">
-      <img src={proud1} alt='' className='proud mb-3'/>
-        <h5 className="title-1 ">Stay Healthy</h5>
-        <p className="fs-4">carde
-          La meilleure façon d’améliorer son bien-être global est de prendre soin de sa santé naturellement.
-          <p className="fs-6">
-          En adoptant des habitudes saines, comme une alimentation équilibrée, une activité physique régulière et une bonne gestion du stress.
-        </p>
-        </p>
-      </div>
-    </div>
-    <div className="new-slide bg-whight">
-      <div className="slide-image">
-        <img src={coach} alt="" className="img-fluid h-100 w-100" />
-      </div>
-      <div className="slide-text">
-      <img src={proud1} alt='' className='proud2 mb-3'/>
-        <h5 className="title-1">Welcome to Healthcare</h5>
-        <p className="fs-4">
-          Prendre soin de sa santé de manière naturelle est l’une des meilleures façons d’améliorer son bien-être global.
-        </p>
-
-        <p className="fs-6">
-          En adoptant des habitudes saines, comme une alimentation équilibrée, une activité physique régulière et une bonne gestion du stress.
-        </p>
-      
-      </div>
-    </div>
-    <div className="new-slide bg-whight">
-      <div className="slide-image">
-        <img src={persone1} alt="" className="img-fluid h-100 w-100" />
-      </div>
-      <div className="slide-text">
-      <img src={proud1} alt='' className='proud mb-3'/>
-        <h5 className="title-1">Welcome to Healthcare</h5>
-        <p className="fs-4">
-          Prendre soin de sa santé de manière naturelle est l’une des meilleures façons d’améliorer son bien-être global.
-        </p>
-        <p className="fs-6">
-          En adoptant des habitudes saines, comme une alimentation équilibrée, une activité physique régulière et une bonne gestion du stress.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 <div className='container-fluid info-bg'>
 
 <div className='col-lg-12 col-sm-12'>
 <div className='row'>
- <div className='col-lg-8 col-sm-12'>
-  <h1 className='health'>We Provide Free Health Care Consultation</h1>
-<p className='health' >Your Health is Our Top Priority with Comprehensive, Affordable Health.</p>
+ <div className='col-lg-8 col-sm-12 '>
+ 
+  <h1 className='health-1 ps-5 text-center'>We Provide Free Health Care Consultation</h1>
+<p className='health-2 text-center' style={{letterSpacing:"2px"}}>Your Health is Our Top Priority with Comprehensive, Affordable Health.</p>
 </div>
 <div className='col-lg-4 col-sm-12'>
-<Link to="/register" data-bs-ripple-init  className="btn btn-white mt-4" style={{ width: '200px', height:'45px' }}>Rejister</Link>
+  <div className=''>
+<Link to="/register" data-bs-ripple-init  className="btn btn-white mt-4 health-register">Rejister</Link>
+</div>
 </div>
 </div>
 </div>
