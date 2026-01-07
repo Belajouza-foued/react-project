@@ -7,21 +7,14 @@ import image1 from '../pages/images/bg_1.jpg';
 import image2 from '../pages/images/bg_2.jpg';
 import coach from '../pages/images/coach-1.jpg'
 import coach1 from '../pages/images/coach-1.jpg'
-import staff1 from '../pages/images/staff-1.jpg'
-import staff2 from '../pages/images/staff-2.jpg'
-import staff3 from '../pages/images/staff-3.jpg'
-import staff4 from '../pages/images/person_1.jpg'
-import staff6 from '../pages/images/staff-6.jpg'
 import staff10 from '../pages/images/dumbbell-ray.svg'
 import staff7 from '../assets/icons/data.png'
 import staff8 from '../assets/icons/loyalty-program.png'
 import staff9 from '../assets/icons/meal.png'
-import staff15 from '../pages/images/person_2.jpg'
-import persone1 from '../pages/images/person-1.jpg'
-import persone2 from '../pages/images/person-2.jpg'
-import persone3 from '../pages/images/image_5.jpg'
 import React, { useState, useEffect } from "react";
-/*npm install react-simple-typewriter*/
+import persone3 from '../pages/images/person-3.jpg'
+import CarouselPerson from '../components/CarouselPerson';
+
 const Home = () => {
             const [isExpanded, setIsExpanded] = useState(false);
         const [isExpandedNutrition, setIsExpandedNutrition] = useState(false);
@@ -73,10 +66,10 @@ const Home = () => {
  <div className="carousel-header">
  
   <div className='col-lg-12'>
-    <div className='d-flex justify-content-center  pt-3 mb-3 tap-text'>
-   <h2 className=''style={{color:"#1089ff"}}>{displayText}</h2> {/* ✅ Affichage progressif du texte */}
+    <div className='d-flex justify-content-center  pt-3 mb-3'>
+   <h2 className='tap-text'style={{color:"#1089ff"}}>{displayText}</h2> {/* ✅ Affichage progressif du texte */}
  </div>
-       <div id="carouselId" className="carousel slide" data-bs-ride="carousel">
+       <div id="carouselId" className="carousel slide pt-sm-1" data-bs-ride="carousel">
       <div className="carousel-inner" role="listbox">
     <div className="carousel-item active">
   <img src={image2} className="img-fluid" alt="pour femme enceinte"/>
@@ -108,6 +101,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                <div className='button-icon'>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon wow fadeInLeft bg bg-info" data-wow-delay="0.2s" aria-hidden="false"></span>
                     <span className="visually-hidden-focusable">Previous</span>
@@ -116,6 +110,7 @@ const Home = () => {
                     <span className="carousel-control-next-icon wow fadeInRight bg bg-info" data-wow-delay="0.2s" aria-hidden="false"></span>
                     <span className="visually-hidden-focusable">Next</span>
                 </button>
+                </div>
             </div>
             </div>
               {/*scroll*/}
@@ -337,7 +332,7 @@ const Home = () => {
   data-bs-ride="carousel"
 >
 
-  <div className="d-flex justify-content-center mb-4">
+  <div className="d-flex justify-content-center button-icon-res">
     <button 
       className="carousel-control-prev position-relative"
       type="button"
@@ -358,124 +353,8 @@ const Home = () => {
     </button>
   </div>
  
-  <div  className="carousel-inner py-4">
-   
-    <div  className="carousel-item active">
-      <div  className="container">
-        <div  className="row">
-          <div  className="col-lg-4">
-            <div  className="card card-expert">
-              <img
-                src={staff1}
-                className="card-img-top"
-                alt="Waterfall"
-              />
-              <div  className="card-body">
-                <h5  className="card-title"> Yassine Khaled </h5>
-                <p  className="card-text">
-                Grâce à ce programme, j'ai retrouvé ma forme et une énergie incroyable au quotidien !
-                </p>
-                <Link to="#" data-bs-ripple-init  className="btn btn-primary">Button</Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-sm-12 d-none d-lg-block">
-            <div className="card card-expert">
-              <img
-                src={staff2}
-                className="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-              <div  className="card-body pt-4">
-                <h5  className="card-title">Sami Nouir</h5>
-                <p  className="card-text">
-                Un accompagnement personnalisé et des résultats visibles dès le premier mois. Je recommande !
-                </p>
-                <Link to="#!" data-bs-ripple-init className="btn btn-primary">Button</Link>
-              </div>
-            </div>
-          </div>
-
-          <div  className="col-lg-4 d-none d-lg-block col-sm-12">
-            <div  className="card card-expert">
-              <img
-                src={staff3}
-                cl className="card-img-top"
-                alt="Sunset over the Sea"
-              />
-              <div  className="card-body">
-                <h5  className="card-title">Yamen Mohamed</h5>
-                <p  className="card-text">
-                L'équipe est super motivante, et le suivi m'a permis de dépasser mes limites. Merci infiniment !
-                </p>
-                <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-
-  
-    <div className="carousel-item">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-4 col-md-12">
-            <div className="card card-expert">
-              <img
-                src={staff4}
-                className="card-img-top"
-                alt="Fissure in Sandstone"
-              />
-              <div className="card-body">
-                <h5 className="card-title">Nicolas Durant</h5>
-                <p className="card-text">
-                Une équipe à l’écoute et un programme qui s’adapte parfaitement à mes besoins.
-                </p>
-                <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
-              </div>
-            </div>
-          </div>
-
-               <div className="col-lg-4 d-none d-lg-block col-sm-12">
-            <div className="card card-expert">
-              <img
-                src={staff6}
-                className="card-img-top"
-                alt="Hot Air Balloons"
-              />
-              <div className="card-body">
-                <h5 className="card-title">Sarra Amri</h5>
-                <p className="card-text">
-                Le suivi est excellent, et je vois des progrès chaque semaine.Merci! 
-                </p>
-                <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-12">
-            <div className="card card-expert">
-              <img
-                src={staff15}
-                className="card-img-top"
-                alt="Fissure in Sandstone"
-              />
-              <div className="card-body">
-                <h5 className="card-title">Nicolas Durant</h5>
-                <p className="card-text">
-                Une équipe à l’écoute et un programme qui s’adapte parfaitement à mes besoins.
-                </p>
-                <Link to="#!" data-bs-ripple-init  className="btn btn-primary">Button</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-   
+  <div  className="carousel-res py-4">   
+    <CarouselPerson/>  
 
   </div>
 
@@ -578,13 +457,14 @@ const Home = () => {
 <div className='col-lg-12 col-sm-12'>
 <div className='row'>
  <div className='col-lg-8 col-sm-12 '>
- 
-  <h1 className='health-1 ps-5 text-center'>We Provide Free Health Care Consultation</h1>
-<p className='health-2 text-center' style={{letterSpacing:"2px"}}>Your Health is Our Top Priority with Comprehensive, Affordable Health.</p>
+ <div className='health-3'>
+  <h1 className='health-1 ps-5 pt-3'>We Provide Free Health Care Consultation</h1>
+<p className='health-2 ps-5' style={{letterSpacing:"2px"}}>Your Health is Our Top Priority with Comprehensive, Affordable Health.</p>
 </div>
-<div className='col-lg-4 col-sm-12'>
+</div>
+<div className='col-lg-4 col-sm-12 text-end pe-5 pb-3'>
   <div className=''>
-<Link to="/register" data-bs-ripple-init  className="btn btn-white mt-4 health-register">Rejister</Link>
+<Link to="/register" data-bs-ripple-init  className="btn btn-white mt-4 health-register">Register</Link>
 </div>
 </div>
 </div>
@@ -600,7 +480,7 @@ const Home = () => {
       <div className="row">
          {/* Image qui glisse de la gauche */}
          <div className="col-md-6 gx-5 mb-4 ps-3 col-sm-12  d-flex justify-content-center pt-5">
-          <div className="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init data-mdb-ripple-color="light">
+          <div className="bg-image hover-overlay shadow-2-strong text-center" data-mdb-ripple-init data-mdb-ripple-color="light">
             <img src = {persone3} className="img-fluid avis" alt=''/>
             <Link to="#!">
               <div className="mask" style={{backgroundColor: 'lightblue'}}></div>

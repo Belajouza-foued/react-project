@@ -18,27 +18,32 @@
   max-width: 120px;
 }
 @media (max-width: 768px) {
-  .logo-fit {
-    position: relative;
-    max-width: 80px;
-    left: 25px;
-    top: 25px;
+  .social-media a {
 
+} 
+  .wrap {
+    
+   
+  }
+  .logo-fit {
+       max-width: 80px;  
+       transform: translateX(20px);
+       margin-top: 10px;
   }
   .navbar-brand {
-   max-width: 50px;
-    position: relative;
- right: 60px;
-  bottom: 20px;
+   max-width: 70px;  
+  }
+  .navbar {
+    max-width: 400px ;
   }
     .nav-link:hover {
  color:#006fdc !important;
   }
   .navbar-toggler {
-    position: relative ;
-    right: 50px;
-    width: 50px;
-     top: 20px;
+   
+ 
+    width: 100px;
+    
       }
       .search-container {
              font-size: 15px;
@@ -46,7 +51,7 @@
       .form-control-sm {
         max-width: 60px;
       }
- }
+      }
 
 /* NAVBAR */
 .ftco-navbar-light {

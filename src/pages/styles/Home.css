@@ -1,22 +1,64 @@
  @media (max-width: 768px) {
 .tap-text {
-text-align: center;
-font-size: 10px !important;
+text-align: left;
+font-size: 16px !important;
+
 }
+.program-hiden {
+ font-size: 13px !important;
+transform: translateY(50px);
+margin-left: 15%;
+}
+ .carousel {
+       padding-left: 20%;
+      }
+      .carousel-inner {
+        margin-top: 25px;
+      }
+      .carousel-caption {
+        transform: translateY(-170px);
+      }
+      .img-fluid {
+     max-height: 750px;
+     object-fit: contain;
+    
+       
+      }
  }
+ 
   @media (max-width: 768px) {
  .text-uppercase {
-font-size: 15px;
+font-size: 18px !important;
+
  }
  .text-capitalize {
-  font-size: 13px !important;
+  font-size: 16px !important;
+  
  }
  .simple-p {
-  font-size: 10px !important;
+  font-size: 15px !important; 
  }
+ .button-icon {
+
+}
+
+ 
+  .carousel-control-next {
+   padding-right: 25% !important;
+margin-bottom: 20%;
+  }
+
+  .carousel-control-prev {
+   padding-left: 25% !important;
+   margin-bottom: 20%;
+  }
+
+  
+
  Link.border-secondary {
-  font-size: 12px !important;
+  font-size: 15px !important;
   max-width: 35px !important; 
+ 
  }
  .coach-pro {
   margin-top: 20px;
@@ -51,30 +93,81 @@ font-size: 15px;
    position: relative;
    left: 50px;
  }
+ 
 
  h1.health-1 {
-  font-size: 15px !important;
+ transform: translateX(-15px);
+  font-size: 13px !important;
     color: white !important;
-    position: relative;
-    z-index: 1;
-    opacity: 100%;
+      
+  }
+  .health-3 {
+    max-width: 230px !important;
+   
+  }
+  .info-bg {
+
+    max-width: 230px;
   }
    .health-2 {
+    transform: translateX(-15px);
   font-size: 12px !important;
   color: #fff !important;
   }
+  .ftco-section {
+    max-width: 250px !important;
+   margin: 0 auto;
+  }
+ 
+ 
 }
 .health-register {
-  width: 200px;
-  height: 45px;
+  transform: translateX(-15px);
+padding-right: 5%;
+ font-size: 17px !important;
+ color: #006fdc !important;
 }
+.health-register:hover {
 
+ font-size: 17px !important;
+ color: #ffff !important;
+}
+ h1.health-1 {
+  font-size: 18px !important;
+    color: white !important;
+           opacity: 100%;
+           text-align: start;
+  }
+   .health-2 {
+  font-size: 15px !important;
+  color: #fff !important;
+  }
 @media (max-width: 768px) {
   .health-register {
     width: 100px;
     height: 35px;
-    font-size: 12px !important;
-   
+    font-size: 12px !important;   
+  }
+  .carousel-res {
+   max-width: 250px;
+   transform: translateX(-25px);
+  }
+  .button-icon-res  {
+   transform: translateX(-30px);
+   margin-top: 20px;
+  }
+  .text-muted  {
+    font-size: 13px;
+  }
+  .avis {
+    max-width:200px !important;    
+  }
+  .text-muted{
+    font-size:13px;
+    max-width:220px;
+  }
+  .price {
+    font-size: 13px;
   }
 }
 /*add footer*/
@@ -230,8 +323,10 @@ Link.fs-4 {
 text-decoration: none;
 }
 .avis {
-  width: 500px;
-  height: 600px;
+  padding-left:10px;
+  margin:0 auto;
+  width: 350px;
+  height: 350px;
   border-radius: 10px;
 }
 .plans {
@@ -825,9 +920,11 @@ padding-bottom: 50px;
           background: #fff;
           color: #000000; }
   
-  @media (min-width: 992px) {
-    .ftco-services .container {
-      margin-top: -200px; } }
+  @media (max-width: 768px) {
+    .ftco-services  {
+      transform: translateY(50px);
+         }
+     }
   
   .services {
     display: block;

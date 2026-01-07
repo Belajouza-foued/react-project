@@ -16,8 +16,8 @@ return (
 						<div className="subscribe">
 							<form action="#" className="subscribe-form">
                 <div className="form-group d-flex">
-                  <input type="text" className="form-control rounded-left" placeholder="Enter email address"/>
-                  <input type="submit" value="Subscribe" className="form-control submit px-3"/>
+                  <input type="text" className="form-control rounded-left submit-footer" placeholder="Enter email address"/>
+                  <input type="submit" value="Subscribe" className="form-control submit submit-footer px-3"/>
                 </div>
               </form>
 						</div>

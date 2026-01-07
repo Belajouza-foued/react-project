@@ -27,6 +27,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Spinner from '../src/components/Spinner';
 import { useEffect,useState } from 'react';
+import { CarouselPerson } from 'bootstrap/dist/js/bootstrap.bundle.min';
  // ✅ Import des traductions
 
 const App = () => {
@@ -83,6 +84,7 @@ const App = () => {
         <Route path="contact" element={<Contact />} />
         <Route path="/admin/:id" element={<EditAdmin />} />
         <Route path="blog" element={<Blog />} />
+         <Route path="carousel" element={<CarouselPerson />} />
         
        
       </Routes>

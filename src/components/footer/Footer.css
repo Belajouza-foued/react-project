@@ -5,3 +5,20 @@
     font-size: 15px;
     font-family: Arial Arial, Helvetica, sans-serif;
 }
+@media (max-width: 768px) {
+    .footer {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+    .submit-footer {        
+        font-size: 10px !important;
+        max-height: 35px;
+    }
+.list-unstyled {
+    font-size: 15px !important;
+}
+.text-condition {
+    font-size: 12px;
+
+}
+}
