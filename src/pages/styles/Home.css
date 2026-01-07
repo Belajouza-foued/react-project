@@ -6,20 +6,23 @@ font-size: 16px !important;
 }
 .program-hiden {
  font-size: 13px !important;
-transform: translateY(50px);
+transform: translateY(70px);
 margin-left: 15%;
 }
  .carousel {
-       padding-left: 20%;
+       padding-left: 17%;
+       max-width: 350px;
+       max-height: 730px;
       }
       .carousel-inner {
         margin-top: 25px;
+       
       }
       .carousel-caption {
         transform: translateY(-170px);
       }
       .img-fluid {
-     max-height: 750px;
+     max-height: 720px;
      object-fit: contain;
     
        
@@ -38,23 +41,17 @@ font-size: 18px !important;
  .simple-p {
   font-size: 15px !important; 
  }
- .button-icon {
-
-}
+ 
 
  
   .carousel-control-next {
-   padding-right: 25% !important;
-margin-bottom: 20%;
+   padding-right: 12% !important;
+
   }
 
   .carousel-control-prev {
-   padding-left: 25% !important;
-   margin-bottom: 20%;
+   padding-left: 27% !important;  
   }
-
-  
-
  Link.border-secondary {
   font-size: 15px !important;
   max-width: 35px !important; 
@@ -67,9 +64,21 @@ margin-bottom: 20%;
   max-height: 150px;
    }
  .form-position {
-  max-width: 200px !important;
-   margin-top: 20px;
+  max-width: 250px !important;
+   margin-top: 50px;
+   transform: translateY(50px);
  }
+ .ftco-no-pt {
+  transform: translateY(40px);
+ }
+ .feedback {
+    transform: translateY(50px);
+ }
+  .button-icon-res  {
+       transform: translateX(-50px);
+       padding-bottom: 50%;
+   text-align: center;  
+  }
  .title-1 {
   font-size: 16px;
  }
@@ -83,8 +92,12 @@ margin-bottom: 20%;
   font-size: 12px;
  }
  .max-container {
-  max-width: 200px;
- }
+  max-width: 250px;
+  border-radius: 25px;
+  transform: translateY(-200px);
+  margin-bottom: 20px;
+
+  }
  .container-expert {
   max-width: 100px;
  }
@@ -106,8 +119,9 @@ margin-bottom: 20%;
    
   }
   .info-bg {
-
     max-width: 230px;
+  transform: translateY(-200px);
+   
   }
    .health-2 {
     transform: translateX(-15px);
@@ -115,7 +129,9 @@ margin-bottom: 20%;
   color: #fff !important;
   }
   .ftco-section {
+    margin-top: 20px;
     max-width: 250px !important;
+    max-height: auto;
    margin: 0 auto;
   }
  
@@ -148,28 +164,79 @@ padding-right: 5%;
     height: 35px;
     font-size: 12px !important;   
   }
-  .carousel-res {
-   max-width: 250px;
-   transform: translateX(-25px);
+.carousel-res {
+    max-width: 90%;         /* un peu plus petit que 100% */
+    position: relative;     
+    right: 15%;               /* décalage vers la droite de 5% */
+    transform: translateY(-20%);
+}
+           
+  .card-text {
+    font-size: 15px !important;
+  }
+  .card-img-top {
+    max-width: 100%;
+  }
+  .res-carousel {
+    text-align: center;
+ 
   }
   .button-icon-res  {
-   transform: translateX(-30px);
-   margin-top: 20px;
+       transform: translateX(-50px);
+   text-align: center;  
   }
-  .text-muted  {
-    font-size: 13px;
-  }
-  .avis {
-    max-width:200px !important;    
+    .avis {
+    max-width:220px !important;  
+     transform: translateY(-120px);  
   }
   .text-muted{
     font-size:13px;
     max-width:220px;
+    margin:0 auto;
   }
-  .price {
-    font-size: 13px;
-  }
+  .plans-1 {
+  transform: translateY(-80px);
 }
+.plans {
+  transform: translateY(-100px);
+  font-size: 25px;
+  text-align: center;
+  color: #1089ff;
+} 
+  /*false*/
+  .price {
+  text-align: center;
+  font-size: 18px;
+   transform: translateY(-100px);
+}
+.programe-res-2 {
+  transform: translateY(-100px);
+}
+.link-res-5 {
+    display: block;
+  text-align: center;
+}
+}
+ .plans-1 {
+line-height: 5px !important;
+}
+.plans {
+   font-size: 25px;
+  text-align: center;
+  color: #1089ff;
+  line-height: 5px !important;
+} 
+  /*false*/
+  .price {
+  text-align: center;
+  font-size: 15px;   
+  font-weight: 400;
+}
+.text-muted{
+    font-size:18px;
+    line-height: 25px;
+    
+  }
 /*add footer*/
 .bg-primary {
   background-color: #1089ff;
@@ -329,13 +396,8 @@ text-decoration: none;
   height: 350px;
   border-radius: 10px;
 }
-.plans {
-  text-align: center;
-  color: #1089ff;
-}
-.price {
-  text-align: center;
-}
+
+
 .info-bg {
   background-color: #1089ff;
  
@@ -922,7 +984,7 @@ padding-bottom: 50px;
   
   @media (max-width: 768px) {
     .ftco-services  {
-      transform: translateY(50px);
+      transform: translateY(100px);
          }
      }
   

@@ -354,7 +354,7 @@ const Home = () => {
   </div>
  
   <div  className="carousel-res py-4">   
-    <CarouselPerson/>  
+    <CarouselPerson className="res-carousel"/>  
 
   </div>
 
@@ -364,7 +364,7 @@ const Home = () => {
 </div>
 
 <div className='container max-container'>
-  <div className='row'>
+  <div className='row g-4'>
   <div className='col-lg-3 col-sm-12'>
 <div className="card text-center modified">
   <div className="bg-image hover-overlay ripple pt-5" data-mdb-ripple-color="light">
@@ -373,7 +373,7 @@ const Home = () => {
     
   </div>
  
-  <div className="card-body ">
+  <div className="card-body card-body-1">
     <h5 className="card-title card-title-1">Sceances d'entrainement</h5>
     <p className="card-text">
     Un entraînement rapide et efficace qui combine 
@@ -470,13 +470,13 @@ const Home = () => {
 </div>
 </div>
 </div>
-<div className=" col-lg-12 col-sm-12 mt-2 pt-3">
-  <p className='plans pt-2'>Plans & Prices</p>
-  <h1 className="price">Choose Your Perfect plans</h1>  
+<div className=" col-lg-12 col-sm-12 mt-2 pt-5 plans-1">
+  <p className='plans '>Plans & Prices</p>
+  <h1 className="price pb-2">Choose Your Perfect plans</h1>  
   </div>
   {/*add person*/}
-  <section>
-    <div className='container-fluid pt-5 bg bg-subtle'>
+  <section className=''>
+      <div className='container-fluid pt-5 bg bg-subtle programe-res-2'>
       <div className="row">
          {/* Image qui glisse de la gauche */}
          <div className="col-md-6 gx-5 mb-4 ps-3 col-sm-12  d-flex justify-content-center pt-5">
@@ -489,17 +489,17 @@ const Home = () => {
           </div>
 
         <div className="col-md-6 gx-5 mb-4 col-sm-12 ">
-        <Link to="https://virtuagym.com/user/fouedbelajouza-f7612895/nutrition" className='fs-4' style={{ textDecoration: 'none' }}> Programe Entrainement</Link>
+        <Link to="https://virtuagym.com/user/fouedbelajouza-f7612895/nutrition" className='fs-4 link-res-5' style={{ textDecoration: 'none' }}> Programe Entrainement</Link>
           <p className="text-muted">
           Un programme d'entraînement efficace combine cardio (30 minutes, 3-5 fois par semaine) pour l'endurance, renforcement musculaire (2-3 séances par semaine) pour la force, et des étirements réguliers pour améliorer la souplesse.
            Ajuste l'intensité selon ton niveau, en augmentant progressivement la difficulté pour éviter les blessures. 
           </p>
-        <Link to="/nutrition" className='fs-4' style={{ textDecoration: 'none' }}> Programe Nutrition</Link>
+        <Link to="/nutrition" className='fs-4 link-res-5' style={{ textDecoration: 'none' }}> Programe Nutrition</Link>
           <p className="text-muted">
           Ce régime vous aidera à perdre du poids de façon durable et vous permettra de maigrir progressivement tout en conservant les nutriments essentiels. 
           Ce régime est établi à partir d'une combinaison parfaitement équilibrée entre des aliments sains et un faible apport en graisses et en glucides.
           </p>
-          <Link to="/programe-dietetique" className="fs-4" style={{ textDecoration: 'none' }}>  Programme Diététique
+          <Link to="/programe-dietetique" className="fs-4 link-res-5" style={{ textDecoration: 'none' }}>  Programme Diététique
 </Link>
 
           <p className="text-muted">
