@@ -325,7 +325,6 @@ const Home = () => {
 
 {/*card feedback*/}
 <div className='d-flex justify-content-center align-items-center min-vh-100'>
-
 <div
   id="carouselMultiItemExample"
    className="carousel slide carousel-dark text-center"
@@ -369,11 +368,9 @@ const Home = () => {
 <div className="card text-center modified">
   <div className="bg-image hover-overlay ripple pt-5" data-mdb-ripple-color="light">
   <img  src={staff10}   className="programe-icon" alt="Fissure in Sandstone"
-              />
-    
+  />    
   </div>
- 
-  <div className="card-body card-body-1">
+   <div className="card-body card-body-1">
     <h5 className="card-title card-title-1">Sceances d'entrainement</h5>
     <p className="card-text">
     Un entraînement rapide et efficace qui combine 
@@ -446,11 +443,7 @@ const Home = () => {
 </div>
 </div>
 <div className=" col-lg-12 col-sm-12 pt-5">
-  <h1 className="feedback pb-2">Others Stories</h1>
-
-
-
-{/*new 1 carrousel*/}
+  <h1 className="feedback pb-2">Others Stories</h1>{/*new 1 carrousel*/}
 </div>
 <div className='container-fluid info-bg'>
 

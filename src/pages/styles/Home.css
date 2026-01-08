@@ -5,21 +5,24 @@ font-size: 16px !important;
 
 }
 .program-hiden {
- font-size: 13px !important;
-transform: translateY(70px);
-margin-left: 15%;
+  max-width: 230px;
+ font-size: 10px !important;
+transform: translateY(20px);
+padding-left: 3%;
+margin-left: 5%;
 }
  .carousel {
-       padding-left: 17%;
+  
+       padding-left: 10%;
        max-width: 350px;
-       max-height: 730px;
+       max-height: 750px;
       }
       .carousel-inner {
-        margin-top: 25px;
+        
        
       }
       .carousel-caption {
-        transform: translateY(-170px);
+       
       }
       .img-fluid {
      max-height: 720px;
@@ -45,12 +48,12 @@ font-size: 18px !important;
 
  
   .carousel-control-next {
-   padding-right: 12% !important;
+   padding-right: 10% !important;
 
   }
 
   .carousel-control-prev {
-   padding-left: 27% !important;  
+   padding-left: 20% !important;  
   }
  Link.border-secondary {
   font-size: 15px !important;
@@ -64,19 +67,20 @@ font-size: 18px !important;
   max-height: 150px;
    }
  .form-position {
-  max-width: 250px !important;
+  max-width: 230px !important;
    margin-top: 50px;
-   transform: translateY(50px);
+   transform: translateY(100px);
  }
  .ftco-no-pt {
   transform: translateY(40px);
  }
  .feedback {
-    transform: translateY(50px);
+    transform: translateY(150px);
  }
   .button-icon-res  {
-       transform: translateX(-50px);
-       padding-bottom: 50%;
+       position: relative;
+       right: 20px;
+      top: 120px;
    text-align: center;  
   }
  .title-1 {
@@ -94,7 +98,7 @@ font-size: 18px !important;
  .max-container {
   max-width: 250px;
   border-radius: 25px;
-  transform: translateY(-200px);
+  transform: translateY(70px);
   margin-bottom: 20px;
 
   }
@@ -120,7 +124,7 @@ font-size: 18px !important;
   }
   .info-bg {
     max-width: 230px;
-  transform: translateY(-200px);
+  transform: translateY(60px);
    
   }
    .health-2 {
@@ -129,7 +133,7 @@ font-size: 18px !important;
   color: #fff !important;
   }
   .ftco-section {
-    margin-top: 20px;
+   transform: translateY(150px);
     max-width: 250px !important;
     max-height: auto;
    margin: 0 auto;
@@ -167,8 +171,9 @@ padding-right: 5%;
 .carousel-res {
     max-width: 90%;         /* un peu plus petit que 100% */
     position: relative;     
-    right: 15%;               /* décalage vers la droite de 5% */
-    transform: translateY(-20%);
+  right: 7px;    
+  top: 130px;          /* décalage vers la droite de 5% */
+    
 }
            
   .card-text {
@@ -182,12 +187,13 @@ padding-right: 5%;
  
   }
   .button-icon-res  {
-       transform: translateX(-50px);
+     
    text-align: center;  
+   position: relative;
   }
     .avis {
     max-width:220px !important;  
-     transform: translateY(-120px);  
+    
   }
   .text-muted{
     font-size:13px;
@@ -195,11 +201,10 @@ padding-right: 5%;
     margin:0 auto;
   }
   .plans-1 {
-  transform: translateY(-80px);
+ 
 }
 .plans {
-  transform: translateY(-100px);
-  font-size: 25px;
+   font-size: 25px;
   text-align: center;
   color: #1089ff;
 } 
@@ -207,10 +212,10 @@ padding-right: 5%;
   .price {
   text-align: center;
   font-size: 18px;
-   transform: translateY(-100px);
+
 }
 .programe-res-2 {
-  transform: translateY(-100px);
+  transform: translateY(-30px);
 }
 .link-res-5 {
     display: block;
@@ -218,7 +223,8 @@ padding-right: 5%;
 }
 }
  .plans-1 {
-line-height: 5px !important;
+  transform: translateY(50px);
+line-height: 2px !important;
 }
 .plans {
    font-size: 25px;
@@ -984,7 +990,7 @@ padding-bottom: 50px;
   
   @media (max-width: 768px) {
     .ftco-services  {
-      transform: translateY(100px);
+      transform: translateY(50px);
          }
      }
   
