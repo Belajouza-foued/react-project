@@ -16,7 +16,7 @@ const Contact = () => {
             <div className="col-lg-12 col-sm-12">
             <div className="containter-fluid mt-5 text-start contact-nous" style={{padding:"5%", opacity:"90%"}}>
                     <h4 className="text-center mx-auto ps-2 contact-nous" style={{ textAlign: "left", fontSize:"60px", color:"#f0f0f0" }}>
-                     Contactez-nous</h4>               
+                     Contactez-nous</h4>
 
                 </div>
             </div>

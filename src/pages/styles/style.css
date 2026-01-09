@@ -76,8 +76,10 @@ button.navbar-toggler:focus-visible {
   font-size: 20px;
 }
 .nav-link {
-  font-size: 13px;
+  font-size: 14px !important;
   padding: 10px 15px;
+  font-family: 600;
+  color: #0000;
 }
 
 /* SEARCH */
