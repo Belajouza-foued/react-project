@@ -67,5 +67,14 @@ p.text-stories {
   height: auto; /* Garde le ratio de l'image */
   border-radius: 5px; /* Optionnel : arrondir les coins */
 }
+@media (max-width: 768px) {
+.group-stories {
+ transform: translateX(-50px);
+
+}
+.link-stories {
+font-size: 12px !important;
+}
+}
 
 

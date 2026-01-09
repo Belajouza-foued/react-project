@@ -30,21 +30,34 @@
        transform: translateX(20px);
        margin-top: 10px;
   }
-  .navbar-brand {
-   max-width: 70px;  
+  .navbar-brand { 
+   font-size: 13px !important;
+   padding-left: 15px;
   }
   .navbar {
-    max-width: 400px ;
+    max-width: 400px !important;
   }
     .nav-link:hover {
  color:#006fdc !important;
   }
-  .navbar-toggler {
-   
- 
-    width: 100px;
-    
+  .navbar-toggler {  
+ transform: translateX(-20px);
+    width: 70px;
+    border: none    
       }
+      .navbar-toggler-icon {
+      
+      }
+    button.navbar-toggler,
+button.navbar-toggler:focus,
+button.navbar-toggler:active,
+button.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
       .search-container {
              font-size: 15px;
       }
@@ -92,7 +105,7 @@
   
 }
 .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.3);
+ 
 }
 
 

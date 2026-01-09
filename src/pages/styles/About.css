@@ -29,11 +29,21 @@
     height: auto;
     margin: 20px 0;
   }
-  .img-site {
-    width: 100%;
-    height: 600px;
-   padding: 0px;
-  }
+.bg-image-1 {
+  width: 100%;
+  height: 100vh;        /* hauteur écran */
+  
+}
+
+.img-site {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* image sans déformation */
+  display: block;
+}
+
+
+
   .img-card {
     height: 200px;
   }
@@ -120,7 +130,40 @@ align-items: center;
     padding-left: 20px;
     text-align: left;
   }
-  
+  @media (max-width: 768px) {
+   
+    .our-story {
+      max-width: 270px;
+     margin: 0 auto;
+  transform: translateY(-20vh);
+ 
+    }
+    .card-about {
+max-width: 270px;
+ transform: translateY(-20vh); 
+    }
+    .card-text {
+      font-size: 13px !important;
+    }
+    .about-section {
+      transform: translateY(-20vh); 
+      max-width: 270px;
+      margin: 0 auto;
+    }
+    .border-login {
+        transform: translateY(-20vh); 
+      max-width: 270px !important;
+      margin: 0 auto;
+    }
+    .bg-image-1 {
+      max-width: 270px;
+      max-height: 200px;
+         transform: translateY(-15vh); 
+         margin:0 auto;
+    }
+    
+  }
+  .bg-image
   .our-story ul li {
     font-size: 1.1rem;
     color: #333;
@@ -160,3 +203,26 @@ align-items: center;
     color:#007bff;
 
   }
+  /*version responsive*/ 
+  .about-coach {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-about {
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+ }
+
+.card-about:hover {
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .card-about {
+    margin: 0 auto;
+  }
+}
+
+
+

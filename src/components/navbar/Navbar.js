@@ -76,7 +76,7 @@ const Navbar = () => {
 
           {/* HAMBURGER */}
           <button
-            className="navbar-toggler pe-2"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -95,12 +95,15 @@ const Navbar = () => {
                 <Link className="nav-link" to="/about">{translations[lang].about}</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/services">Services</Link>
+                <Link className="nav-link" to="/help">Services</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/nutrition">Nutrition</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/stories">{translations[lang].facts}</Link>
               </li>
-              <li className="nav-item">
+                            <li className="nav-item">
                 <Link className="nav-link" to="/contact">{translations[lang].contact}</Link>
               </li>             
             </ul>

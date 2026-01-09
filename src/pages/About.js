@@ -21,24 +21,15 @@ const About = () => {
           }, []);
   return (
 
-    <div className='container-fluid bg-light-subtle'>
+    <div className='container-fluid bg-light-subtle pt-5'>
         <div className='col-lg-12 col-sm-12'>
-        <div className='pt-5'>
-          <div style={{ paddingTop: "", textAlign: "center", justifyContent: "center",color: "#1089ff" }}>
-      <h2 className={isVisible ? "visible" : "hidden"}>About our Services !</h2>
-      <style>{`
-        .hidden { opacity: 0; transform: translateY(20px); transition: all 0.5s; }
-        .visible { opacity: 1; transform: translateY(0); }
-      `}</style>
-    </div>
-          </div>
-     <div className="bg-image mt-5">
-      <img src={imageSite} className='img-site' alt="2025: Courez vers l’avenir avec style (et un soupçon d’ironie)"/>
+       
+     <div className="bg-image-1 mt-5 pt-5">
+      <img src={imageSite} className='img-site img-fluid' alt="2025: Courez vers l’avenir avec style (et un soupçon d’ironie)"/>
 
 </div>
- <section className='our-story mt-5'>
-<div className="row">
-   
+ <section className='our-story mt-5 pt-5'>
+<div className="row">  
             
   <div class="container">
     <h2>Our Story</h2>
@@ -62,75 +53,77 @@ const About = () => {
 
           </div>
         </section>
-        
-    
-        <hr className="my-5" />
-    
-       
-       <div className='container ms-5'>         
-         <div className="row about-coach">
-            <div className="col-lg-4 col-md-12 mb-4 ps-5 col-sm-12">
-              <div className="card card-about ms-5">
-                <div className="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                  <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" className="img-fluid" alt='bieautiful nature' />
-                  <a href="#!">
-                    <div className="mask" style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}}></div>
-                  </a>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">Get More, Give More</h5>
-                  <p className="card-text">
-                  FB Plus membership not only gives you access to exclusive content,
-                   programs, it also supports our free content for everyone.
-                  </p>
-                  <a href="#!" className="btn btn-primary" data-mdb-ripple-init>Upgrade plus</a>
-                </div>
-              </div>
-            </div>
-    
-            <div className="col-lg-4 col-md-6 mb-4 col-sm-12">
-              <div className="card card-about ms-5">
-                <div className="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                  <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" alt='nice wreather' className="img-fluid" />
-                  <a href="#!">
-                    <div className="mask" style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}}></div>
-                  </a>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">Fitness for Free</h5>
-                  <p className="card-text">
-                  We believe fitness should be accessible to everyone, everywhere,
-                   regardless of income level or access to a gym.
-                  </p>
-                  <a href="#!" className="btn btn-primary" data-mdb-ripple-init> free workouts</a>
-                </div>
-              </div>
-            </div>
-    
-            <div className="col-lg-4 col-md-6 mb-4 col-sm-12">
-              <div className="card card-about ms-3">
-                <div className="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                  <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" alt='nice nature' className="img-fluid" />
-                  <a href="#!">
-                    <div className="mask" style={{backgroundColor:' rgba(251, 251, 251, 0.15)'}}></div>
-                  </a>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">Meet the Fitness Coach</h5>
-                  <p className="card-text">
-                  We are proud of the talented, cross-disciplinary team we’ve built
-                   to continue growing our library of fitness and wellness content
-                  </p>
-                  <a href="#!" className="btn btn-primary" data-mdb-ripple-init>Join the team</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
+         <div className="container py-5">
+  <div className="row g-4 justify-content-center about-coach">
+
+    <div className="col-lg-4 col-md-6 col-sm-12">
+      <div className="card card-about h-100 text-center">
+        <div className="bg-image hover-overlay">
+          <img
+            src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+            className="img-fluid rounded-top"
+            alt="beautiful nature"
+          />
+        </div>
+        <div className="card-body d-flex flex-column">
+          <h5 className="card-title">Get More, Give More</h5>
+          <p className="card-text flex-grow-1">
+            FB Plus membership not only gives you access to exclusive content,
+            programs, it also supports our free content for everyone.
+          </p>
+          <a href="#!" className="btn btn-primary mt-auto">Upgrade plus</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="col-lg-4 col-md-6 col-sm-12">
+      <div className="card card-about h-100 text-center">
+        <div className="bg-image hover-overlay">
+          <img
+            src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
+            className="img-fluid rounded-top"
+            alt="nice weather"
+          />
+        </div>
+        <div className="card-body d-flex flex-column">
+          <h5 className="card-title">Fitness for Free</h5>
+          <p className="card-text flex-grow-1">
+            We believe fitness should be accessible to everyone, everywhere,
+            regardless of income level or access to a gym.
+          </p>
+          <a href="#!" className="btn btn-primary mt-auto">Free workouts</a>
+        </div>
+      </div>
+    </div>
+
+    <div className="col-lg-4 col-md-6 col-sm-12">
+      <div className="card card-about h-100 text-center">
+        <div className="bg-image hover-overlay">
+          <img
+            src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
+            className="img-fluid rounded-top"
+            alt="nice nature"
+          />
+        </div>
+        <div className="card-body d-flex flex-column">
+          <h5 className="card-title">Meet the Fitness Coach</h5>
+          <p className="card-text flex-grow-1">
+            We are proud of the talented, cross-disciplinary team we’ve built
+            to continue growing our library of fitness and wellness content.
+          </p>
+          <a href="#!" className="btn btn-primary mt-auto">Join the team</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
         
  
     
-        <hr className="my-5" />
+       
         <section class="about-section">
   <div class="container">
     <h1 class="about-title">À propos de WorldFitness</h1>

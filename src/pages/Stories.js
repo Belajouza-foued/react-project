@@ -113,9 +113,9 @@ const Stories = () => {
 
 </div>
 							</div>
-             <div className='col-lg-4 col-sm-12 group-link mt-5'>
-              <div className='group-stories ms-5  ps-3'>
-                              <div className="link-stories mt-5">
+             <div className='col-lg-4 col-sm-12 group-link mt-5 text-center'>
+              <div className='group-stories   ps-5 ms-5'>
+                              <div className="link-stories mt-5  ">
                 <Link to="https://www.fitness.com/fr/articles/category/le-nutriotion" className="widget__links">
                  <FontAwesomeIcon icon={faNutritionix} color="white"style={{ marginRight: "8px" }}/>
                    Nutrition

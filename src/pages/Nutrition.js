@@ -20,7 +20,7 @@ const Nutrition = () => {
                    <div className="text-center pt-5 p-0 m-0">
                   
                  
-               <div className="card" >
+               <div className="card card-pregnant" >
                <img src="images/pregnant-1.jpg" alt="pregnant" className="pregnant-img "/>
   <div className="card-body">
     <h5 className="card-title" style={{fontWeight:"bolder", fontSize: "25px"}} >femme enceinte</h5>
@@ -39,7 +39,7 @@ const Nutrition = () => {
  
                </div>
                
-               <div className="accordion accordion-flush pt-5" id="accordionFlushExample">
+               <div className="accordion accordion-flush pt-5 accordion-pregnant" id="accordionFlushExample">
  <div className="accordion-item">
    <h2 className="accordion-header">
      <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -82,7 +82,7 @@ const Nutrition = () => {
  </div>
 </div>
 {/*iframe*/}
-<div className='pt-5'>
+<div className='pt-5 video-pregnant'>
 <Link 
             to="https://virtuagym.com/video-on-demand/category/185/" 
             target="_blank" 
@@ -127,52 +127,55 @@ const Nutrition = () => {
   </div>
                 
                </div>
-               <div className="col-lg-9 col-sm-12 pt-4 ps-5 container-fluid">
+               <div className="col-lg-9 col-sm-12 pt-4 ps-5 container-fluid title-pregnant">
                <h1 className="pt-3 mb-2 me-2 title-nutrition">Plan Nutritionnel</h1>
                <div className="form-nutririon pt-3 ps-3">
            
-               <p className="">Un plan nutritionnel équilibré est essentiel pour maintenir une bonne santé. Voici un aperçu des différents nutriments, leurs sources et les bénéfices qu'ils apportent à votre corps.</p>
+               <p className="text-pregnant">Un plan nutritionnel équilibré est essentiel pour maintenir une bonne santé. Voici un aperçu des différents nutriments, leurs sources et les bénéfices qu'ils apportent à votre corps.</p>
            
-               <h3>Les Nutriments Essentiels</h3>
+               <h3 className='nutriment'>Les Nutriments Essentiels</h3>
            
-               <p>Les nutriments se divisent en plusieurs catégories, chacune ayant des fonctions spécifiques. Nous allons explorer les macronutriments ainsi que les micronutriments, qui sont tous deux indispensables pour le bon fonctionnement de l'organisme.</p>
+               <p className='text-pregnant'>Les nutriments se divisent en plusieurs catégories, chacune ayant des fonctions spécifiques. Nous allons explorer les macronutriments ainsi que les micronutriments, qui sont tous deux indispensables pour le bon fonctionnement de l'organisme.</p>
            
-               <table>
-                   <thead>
-                       <tr>
-                           <th>Catégorie</th>
-                           <th>Source</th>
-                           <th>Bénéfices</th>
-                       </tr>
-                   </thead>
-                   <tbody>
-                       <tr>
-                           <td>Protéines</td>
-                           <td>Viandes maigres, poisson, œufs, légumineuses</td>
-                           <td>Contribuent à la construction et à la réparation des tissus musculaires.</td>
-                       </tr>
-                       <tr>
-                           <td>Glucides</td>
-                           <td>Pain, riz, pâtes, fruits</td>
-                           <td>Fournissent de l'énergie à votre corps pour ses fonctions quotidiennes.</td>
-                       </tr>
-                       <tr>
-                           <td>Lipides</td>
-                           <td>Huiles végétales, avocats, noix</td>
-                           <td>Aident à l'absorption des vitamines et sont une source d'énergie durable.</td>
-                       </tr>
-                       <tr>
-                           <td>Vitamines</td>
-                           <td>Fruits, légumes, produits laitiers</td>
-                           <td>Renforcent le système immunitaire et participent au métabolisme cellulaire.</td>
-                       </tr>
-                       <tr>
-                           <td>Minéraux</td>
-                           <td>Noix, graines, légumes à feuilles vertes</td>
-                           <td>Favorisent la santé des os et régulent l'équilibre hydrique du corps.</td>
-                       </tr>
-                   </tbody>
-               </table>
+              <div className="table-responsive">
+  <table className="table table-bordered">
+    <thead className="table-light">
+      <tr>
+        <th>Catégorie</th>
+        <th>Source</th>
+        <th>Bénéfices</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Protéines</td>
+        <td>Viandes maigres, poisson, œufs, légumineuses</td>
+        <td>Construction et réparation des muscles</td>
+      </tr>
+      <tr>
+        <td>Glucides</td>
+        <td>Pain, riz, pâtes, fruits</td>
+        <td>Fournissent de l’énergie</td>
+      </tr>
+      <tr>
+        <td>Lipides</td>
+        <td>Huiles végétales, avocats, noix</td>
+        <td>Source d’énergie durable</td>
+      </tr>
+      <tr>
+        <td>Vitamines</td>
+        <td>Fruits, légumes, produits laitiers</td>
+        <td>Renforcent l’immunité</td>
+      </tr>
+      <tr>
+        <td>Minéraux</td>
+        <td>Noix, graines, légumes verts</td>
+        <td>Santé des os</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
            
                <h2>Les Bénéfices d'une Alimentation Équilibrée</h2>
            
@@ -220,16 +223,20 @@ const Nutrition = () => {
 </ul>
 </div>
 </div>
-<div className='container-fluid bg bg-primary mt-3'>
+<div className='container-fluid bg bg-primary mt-3 container-health'>
 
-<div className='col-lg-12 col-sm-12 bg-primary pt-3 pb-3'>
-<div className='row'>
- <div className='col-lg-8 col-sm-12'>
-  <h1 className='health'>We Provide Free Health Care Consultation</h1>
-<p className='health' >Your Health is Our Top Priority with Comprehensive, Affordable Health.</p>
+<div className='col-lg-12 col-sm-12'>
+<div className='row health-nutrition'>
+ <div className='col-lg-8 col-sm-12 pt-5 pb-5'>
+ <div className='health-3'>
+  <h1 className='health-1 ps-5 pt-3'>We Provide Free Health Care Consultation</h1>
+<p className='health-2 ps-5' style={{letterSpacing:"2px"}}>Your Health is Our Top Priority with Comprehensive, Affordable Health.</p>
 </div>
-<div className='col-lg-4 col-sm-12'>
-<Link to="/createRegister" data-bs-ripple-init  className="btn btn-white mt-4" style={{ width: '200px', height:'45px' }}>Appointment</Link>
+</div>
+<div className='col-lg-4 col-sm-12 text-end pt-5'>
+  <div className='health-appointment'>
+<Link to="/createRegister" data-bs-ripple-init  className="btn btn-white mt-4 health-register health-appointment">Appointment</Link>
+</div>
 </div>
 </div>
 </div>

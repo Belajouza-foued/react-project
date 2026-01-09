@@ -12,9 +12,12 @@
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    @media (max-width: 991.98px) {
+    @media (max-width: 768px) {
       .block-7 {
-        margin-top: 30px; } }
+        margin-top: 30px;
+      max-width: 250px !important;
+    transform: translateX(-20px);} 
+      }
     .block-7 .heading-2 {
       font-size: 20px;
       color: #000000;
@@ -116,14 +119,36 @@ width: 345px;
 height: 350px;
 padding: 0;
 margin: 0;
-
-
-
 }
-.form-position {
-   
- 
+@media (max-width :768px)
+{
+  .pregnant-img {
+max-width: 250px;
 }
+.card-pregnant {
+  max-width: 250px;
+}
+.accordion-pregnant {
+  max-width: 250px;
+}
+.video-pregnant {
+  max-width: 250px;
+}
+.title-pregnant {
+max-width: 300px;
+transform: translateX(-40px);
+}
+.text-pregnant {
+font-size: 16px !important;
+}
+.title-nutrition {
+  font-size: 20px;
+}
+.nutriment {
+  font-size: 16px;
+}
+}
+
 .custom-list {
     font-size: 18px;
     list-style: none;
@@ -377,6 +402,67 @@ p {
     font-size: 14px;
     opacity: 0.8;
   }
+  /*table*/
+  @media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+  .custom-list {
+    transform: translateX(-25px);
+  } 
+.health-appointment {
+  font-size: 10px !important;
+ max-width: 100px;
+margin: 0 auto;
+
+ letter-spacing: 0px;
+ transform: translateY(-10px);
+}
+  .health-appointment:hover {
+    font-size: 10px !important;
+    letter-spacing: 0px;   
+  }
+ .container-health {
+  max-width: 250px; 
+ }
+   .health-nutrition {
+    padding-top: 5px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .health-nutrition .pt-5 {
+    padding-top: 0.5rem !important;
+  }
+
+  .health-nutrition .pb-5 {
+    padding-bottom: 0.5rem !important;
+  }
+}
+
+
   
  
  

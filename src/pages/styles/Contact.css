@@ -8,10 +8,46 @@
     display: flex;
     justify-content:center;
   gap: 70px;
-  transition: transform 0.3s ease-in-out;
-   
+  transition: transform 0.3s ease-in-out;   
 }
-.logo-contact:hover {
+@media (max-width: 768px) {
+.logo-contact {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+.nike {
+  width: 100px;
+}
+.add-admin {
+  max-width: 250px;
+  margin: 0 auto;
+}
+.contact-nous {
+  font-size: 20px !important;
+  max-width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+.add-img {
+  max-width: 270px !important;
+  margin: 0 auto;
+   transform: translateX(-60px);  
+}
+.map-res {
+ 
+  max-width: 250px !important;
+}
+.map-contact {
+  max-width: 270px;
+  margin: 0 auto;
+  transform: translateY(-100px);
+
+}
+}
+.logo- contact:hover {
    transform: scale(1.1); ;
    
 }

@@ -31,6 +31,9 @@ margin-left: 5%;
        
       }
  }
+ .coach-pro {
+
+ }
  
   @media (max-width: 768px) {
  .text-uppercase {
@@ -199,6 +202,7 @@ padding-right: 5%;
     font-size:13px;
     max-width:220px;
     margin:0 auto;
+    text-align: center;
   }
   .plans-1 {
  
@@ -793,13 +797,11 @@ border: none;
 
 /*section*/
 .coach-logo {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
-  justify-content: start;
-  text-align: left;
-  margin-left: 0;
-  float: left;
+ justify-content: end;
+  
 }
 .custom {
   margin-bottom: 5px;

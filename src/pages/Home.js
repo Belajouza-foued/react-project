@@ -206,10 +206,10 @@ const Home = () => {
     </section>
     
    
-    <div className="d-flex justify-content-center align-items-center min-vh-100">
-  <div className="card mb-3 text-center form-position w-100" style={{ maxWidth: '1000px' }}>
+    <div className="d-flex justify-content-center align-items-center min-vh-100 pb-0 pt-0">
+  <div className="card text-center form-position w-100" style={{ maxWidth: '1000px' }}>
     <div className="row g-0">
-      <div className="col-lg-4 col-sm-12">
+      <div className="col-lg-4 col-sm-1">
         <img
           src={coach}
           alt="Trendy Pants and Shoes"
@@ -217,23 +217,23 @@ const Home = () => {
         />
       </div>
       <div className="col-lg-8 col-sm-12">
-        <div className="card-body pt-5">
+        <div className="card-body">
           <h5 className="card-title title-1">Welcome to Healthcare</h5>
-          <p className="card-text">
+          <p className="card-text pt-5">
           Prendre soin de sa santé de manière naturelle est l une des meilleures façons 
           d améliorer son bien-être global.
           </p>
-          <p className="card-p">
+          <p className="card-p pt-2">
           En adoptant des habitudes saines, comme une alimentation équilibrée, une activité physique régulière et une bonne 
           gestion du stress, vous pouvez renforcer votre corps et votre esprit.
           </p>
-          <p className="card-p">
+          <p className="card-p pt-2">
           La santé naturelle se concentre sur des approches douces et préventives, privilégiant les remèdes issus de la nature et des changements de mode de vie pour favoriser un équilibre durable. 
           Cela vous permet de maintenir votre vitalité tout en respectant le rythme de votre corps.
           </p>
           
-            <img className='coach-logo mt-3' src={coach1} alt=''/>
-           <div className='text-logo pt-1 mt-3'>
+            <img className='coach-logo' src={coach1} alt=''/>
+           <div className='text-logo'>
             <p className="ps-3  foued custom pt-2">Foued belajouza</p>
             <p className="ps-3 pb-2 custom" >rihab khouaja</p>
            </div>
